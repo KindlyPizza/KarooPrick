@@ -1,4 +1,5 @@
 // pages/contact.js — Contact & Stockists page for Karoo Prick Co.
+(function () {
 
 // Internal helper — not exposed on window
 function renderStockistResults(filtered, all) {
@@ -215,8 +216,18 @@ window.initContact = function() {
         '</div>';
       var writeAnotherBtn = document.getElementById('write-another-btn');
       if (writeAnotherBtn) {
-        writeAnotherBtn.addEventListener('click', function() { location.reload(); });
+        writeAnotherBtn.addEventListener('click', function() {
+          // Re-render the contact page without a full page reload.
+          // If hash is already #/contact the hashchange event won't fire, so dispatch manually.
+          if (window.location.hash === '#/contact' || window.location.hash === '') {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+          } else {
+            window.location.hash = '#/contact';
+          }
+        });
       }
     });
   }
 };
+
+}());

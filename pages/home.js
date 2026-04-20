@@ -1,4 +1,5 @@
 // pages/home.js — Home page for Karoo Prick Co.
+(function () {
 
 function renderHomeHero() {
   const { COPY } = window.KP_DATA;
@@ -159,3 +160,5 @@ window.initHome = function initHome() {
 
   initFadeUps();
 };
+
+}());

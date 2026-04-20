@@ -1,4 +1,5 @@
 // pages/story.js — Story page for Karoo Prick Co.
+(function () {
 
 function renderStoryHero() {
   const { COPY } = window.KP_DATA;
@@ -151,3 +152,5 @@ window.initStory = function initStory() {
 
   initFadeUps();
 };
+
+}());

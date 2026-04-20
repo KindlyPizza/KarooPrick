@@ -135,6 +135,10 @@ img { display: block; max-width: 100%; }
   transition: font-size 400ms;
 }
 .nav.scrolled .nav-wordmark { font-size: 20px; }
+.nav-center-link {
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none;
+}
 .nav-sub {
   font-family: var(--font-mono); font-size: 8px;
   letter-spacing: 0.25em; text-transform: uppercase;
@@ -874,6 +878,26 @@ img { display: block; max-width: 100%; }
   border: 3px double var(--kp-ink);
   padding: 36px 32px;
   text-align: center;
+}
+
+/* ============================================================
+   Responsive — Tablet (max-width: 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  /* Products grid → 2 columns */
+  .products { grid-template-columns: repeat(2, 1fr); }
+
+  /* Botanicals grid → 3 columns */
+  .botanicals { grid-template-columns: repeat(3, 1fr); }
+
+  /* Stockist layout → stack sidebar above results */
+  .stockist-wrap { grid-template-columns: 1fr; }
+
+  /* Tasting notes → 2 columns */
+  .tasting-notes { grid-template-columns: repeat(2, 1fr); }
+
+  /* Recipes → 2 columns */
+  .recipes { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============================================================
