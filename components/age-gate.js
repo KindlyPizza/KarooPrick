@@ -44,6 +44,6 @@ window.showAgeGate = function showAgeGate(onPass, onFail) {
   });
 
   document.getElementById('age-no').addEventListener('click', function () {
-    onFail();
+    dismiss(onFail);
   });
 };

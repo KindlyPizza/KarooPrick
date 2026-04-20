@@ -42,7 +42,7 @@ window.renderFooter = function renderFooter() {
 
     '  </div>',
     '  <div class="footer-bottom">',
-    '    <div>\u00a9 2026 The Karoo Prick Co. \u00b7 Not for persons under 18</div>',
+    '    <div>\u00a9 ' + new Date().getFullYear() + ' The Karoo Prick Co. \u00b7 Not for persons under 18</div>',
     '    <div>Drink responsibly \u00b7 43% vol</div>',
     '  </div>',
     '</footer>',

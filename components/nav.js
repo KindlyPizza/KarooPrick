@@ -29,7 +29,7 @@ window.renderNav = function renderNav(route) {
   ].join('');
 };
 
-window.initNav = function initNav(route) {
+window.initNav = function initNav() {
   if (_navScrollHandler) window.removeEventListener('scroll', _navScrollHandler);
 
   _navScrollHandler = function () {
