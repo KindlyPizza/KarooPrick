@@ -1,0 +1,296 @@
+/* ============================================================
+   Karoo Prick Design System — Colors & Type
+   Rustic Steampunk · Cape Dutch · Karoo Desert · Prickly Pear
+   ============================================================ */
+
+/* --- Fonts ---------------------------------------------------- */
+
+@font-face {
+  font-family: 'Clasica Striped';
+  src: url('../assets/fonts/ClasicaStriped.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clasica Striped Alt';
+  src: url('../assets/fonts/ClasicaStriped2.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bhortead';
+  src: url('../assets/fonts/Bhortead.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Google Font substitutes (flagged — see README) */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IM+Fell+English:ital@0;1&family=Alfa+Slab+One&family=Special+Elite&display=swap');
+
+:root {
+  /* ------------------------------------------------------------
+     COLORS — pulled from the label illustration + desert setting
+     ------------------------------------------------------------ */
+
+  /* Primary — the banner red/orange that dominates the label */
+  --kp-banner-red:      #C8321E;   /* ribbon red */
+  --kp-banner-red-ink:  #8C2414;   /* shadowed red, used under text */
+  --kp-ochre:           #E6A02C;   /* the yellow "Prickly Pear Gin" band */
+  --kp-ochre-deep:      #B9761C;   /* aged gold, outlines */
+
+  /* Rust — oxidised steel, long-weathered vehicles */
+  --kp-rust-1:          #9C4A1A;   /* fresh rust */
+  --kp-rust-2:          #6E3212;   /* deep rust, crevices */
+  --kp-rust-3:          #3A1A0C;   /* near-black rust ink */
+
+  /* Karoo earth — sun-baked stone, dust, sand */
+  --kp-karoo-sand:      #D8B483;   /* bottle-label cream */
+  --kp-karoo-stone:     #A78565;   /* mid-stone */
+  --kp-karoo-dust:      #EADFC9;   /* dusty paper */
+  --kp-karoo-bone:      #F4EBD6;   /* parchment / label paper */
+
+  /* Prickly pear — the only bright living color in the palette */
+  --kp-cactus-green:    #4F7A3A;   /* pad green */
+  --kp-cactus-dark:     #2F4A22;   /* shadowed green */
+  --kp-pear-fruit:      #C8321E;   /* the ripe fruit (same as banner) */
+  --kp-pear-flower:     #F2A71C;   /* golden flower */
+
+  /* Cape Dutch sky — that pale washed blue behind the gables */
+  --kp-sky:             #B9D3D8;
+  --kp-sky-deep:        #7FA5AE;
+  --kp-sky-ink:         #2D4A52;
+
+  /* Ink & paper */
+  --kp-ink:             #1A120B;   /* near-black, warm */
+  --kp-ink-soft:        #3D2D1F;   /* body ink */
+  --kp-paper:           #F4EBD6;   /* primary surface */
+  --kp-paper-aged:      #E8D9B5;   /* secondary surface */
+
+  /* ------------------------------------------------------------
+     SEMANTIC tokens
+     ------------------------------------------------------------ */
+  --bg:                 var(--kp-paper);
+  --bg-2:               var(--kp-paper-aged);
+  --bg-dark:            var(--kp-rust-3);
+  --bg-deep:            #0E0805;
+
+  --fg:                 var(--kp-ink);
+  --fg-2:               var(--kp-ink-soft);
+  --fg-muted:           var(--kp-karoo-stone);
+  --fg-on-dark:         var(--kp-karoo-bone);
+
+  --accent:             var(--kp-banner-red);
+  --accent-ink:         var(--kp-banner-red-ink);
+  --accent-2:           var(--kp-ochre);
+  --accent-cool:        var(--kp-cactus-green);
+
+  --border:             rgba(26, 18, 11, 0.25);
+  --border-strong:      var(--kp-rust-2);
+  --rule:               rgba(26, 18, 11, 0.55);
+
+  /* ------------------------------------------------------------
+     TYPE — four-voice system
+       Display : Clasica Striped     (hero banners, labels)
+       Serif   : IM Fell English     (headings, body long-form)
+       Slab    : Alfa Slab One       (sub-banners, price, CTAs)
+       Mono    : Special Elite       (small caps, tags, captions)
+     ------------------------------------------------------------ */
+  --font-display: 'Clasica Striped', 'Alfa Slab One', 'Rockwell', serif;
+  --font-display-alt: 'Clasica Striped Alt', 'Alfa Slab One', serif;
+  --font-script:  'Bhortead', 'Clasica Striped', serif;
+  --font-serif:   'EB Garamond', 'IM Fell English', 'Hoefler Text', Georgia, serif;
+  --font-slab:    'Alfa Slab One', 'Clasica Striped', 'Rockwell', serif;
+  --font-mono:    'Special Elite', 'Courier Prime', ui-monospace, 'Courier New', monospace;
+
+  /* Scale — designed for label-on-paper rhythm */
+  --fs-hero:   clamp(3.5rem, 8vw, 6.5rem);  /* KAROO PRICK banner */
+  --fs-h1:     clamp(2.5rem, 5vw, 4rem);
+  --fs-h2:     clamp(1.8rem, 3vw, 2.5rem);
+  --fs-h3:     1.5rem;
+  --fs-lead:   1.25rem;
+  --fs-body:   1.0625rem;
+  --fs-small:  0.875rem;
+  --fs-cap:    0.75rem;
+
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-body:   1.55;
+  --lh-loose:  1.75;
+
+  --tracking-banner: 0.02em;
+  --tracking-caps:   0.18em;
+  --tracking-smcaps: 0.08em;
+
+  /* Spacing / radii / shadows */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  --radius-0: 0px;       /* default: hard edges, like a printed label */
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-pill: 999px;
+
+  --border-1: 1px solid var(--border);
+  --border-2: 2px solid var(--kp-ink);
+  --border-3: 3px double var(--kp-ink);   /* Cape Dutch double rule */
+
+  --shadow-label:  0 1px 0 rgba(26,18,11,0.18), 0 6px 16px rgba(58,26,12,0.15);
+  --shadow-stamp:  inset 0 0 0 2px var(--kp-ink), 2px 2px 0 var(--kp-rust-2);
+  --shadow-deep:   0 20px 60px rgba(14,8,5,0.35);
+}
+
+/* ============================================================
+   Semantic element styles
+   ============================================================ */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* .kp-banner — the iconic arched-ribbon display treatment */
+.kp-banner {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-banner);
+  color: var(--kp-paper);
+  text-transform: uppercase;
+  text-shadow:
+    -1px -1px 0 var(--kp-ink),
+     1px -1px 0 var(--kp-ink),
+    -1px  1px 0 var(--kp-ink),
+     1px  1px 0 var(--kp-ink),
+     3px  3px 0 var(--kp-banner-red-ink);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-banner);
+  color: var(--fg);
+  text-transform: uppercase;
+  margin: 0 0 var(--sp-4);
+}
+
+h2, .h2 {
+  font-family: var(--font-slab);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  margin: 0 0 var(--sp-3);
+}
+
+h3, .h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-style: italic;
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  margin: 0 0 var(--sp-3);
+}
+
+.kp-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-cap);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.kp-smcaps {
+  font-family: var(--font-serif);
+  font-variant: small-caps;
+  letter-spacing: var(--tracking-smcaps);
+  color: var(--fg-2);
+}
+
+p, .body {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-2);
+  max-width: 62ch;
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--fg);
+}
+
+.caption, small {
+  font-family: var(--font-mono);
+  font-size: var(--fs-cap);
+  letter-spacing: var(--tracking-smcaps);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  color: var(--fg);
+}
+
+/* Ornamental double rule — Cape Dutch gable frame */
+.kp-rule {
+  border: 0;
+  border-top: 1px solid var(--kp-ink);
+  border-bottom: 1px solid var(--kp-ink);
+  height: 4px;
+  background: transparent;
+  margin: var(--sp-5) 0;
+}
+
+/* Ribbon — the label's signature red banner */
+.kp-ribbon {
+  position: relative;
+  display: inline-block;
+  padding: var(--sp-3) var(--sp-6);
+  background: var(--kp-banner-red);
+  color: var(--kp-paper);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-banner);
+  border-top: 2px solid var(--kp-ochre);
+  border-bottom: 2px solid var(--kp-ochre);
+  box-shadow: var(--shadow-label);
+}
+.kp-ribbon::before,
+.kp-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 14px;
+  background: var(--kp-banner-red-ink);
+}
+.kp-ribbon::before { left: -14px;  clip-path: polygon(100% 0, 0 50%, 100% 100%); }
+.kp-ribbon::after  { right: -14px; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+/* Paper texture helper */
+.kp-paper {
+  background-color: var(--kp-paper);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(156, 74, 26, 0.06), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(110, 50, 18, 0.08), transparent 55%);
+}
