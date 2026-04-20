@@ -5,8 +5,6 @@
 
 (function() {
   var ROUTES = ['home', 'shop', 'story', 'contact'];
-  var DARK_ROUTES = ['home', 'story'];  // routes where nav starts transparent over dark hero
-
   function getRoute() {
     var h = (window.location.hash || '#/home').replace(/^#\/?/, '');
     var r = h.split('/')[0] || 'home';
@@ -57,7 +55,10 @@
     // Check age gate
     if (localStorage.getItem('kp_age') !== 'ok') {
       window.showAgeGate(
-        function() { start(); },   // onPass: age verified, render the site
+        function() {               // onPass: age verified, persist and render the site
+          localStorage.setItem('kp_age', 'ok');
+          start();
+        },
         function() {               // onFail: redirect away or show message
           window.location.href = 'https://www.drinkaware.co.uk/';
         }
