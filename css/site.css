@@ -856,3 +856,22 @@ img { display: block; max-width: 100%; }
   transition: opacity 800ms cubic-bezier(0.6,0.05,0.35,1), transform 800ms cubic-bezier(0.6,0.05,0.35,1);
 }
 .fadeup.in { opacity: 1; transform: none; }
+
+/* Tasting notes grid */
+.tasting-notes {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 768px) {
+  .tasting-notes { grid-template-columns: 1fr; }
+}
+
+.note-card {
+  background: var(--kp-paper);
+  border: 3px double var(--kp-ink);
+  padding: 36px 32px;
+  text-align: center;
+}

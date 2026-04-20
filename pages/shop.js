@@ -19,7 +19,6 @@ function renderShopProducts() {
         <div class="product-img">
           <img src="assets/img/karoo-prick-bottle-sm.jpg" alt="${p.title}" loading="lazy">
         </div>
-        <div class="vol">${p.volume} · ${p.abv}</div>
         <div class="title">${p.title}</div>
         <div class="desc">${p.desc}</div>
         <div class="meta">
@@ -46,7 +45,7 @@ function renderShopTastingNotes() {
     { h: 'Finish', body: TASTING_NOTES.finish },
   ];
   const noteCards = notes.map(n => `
-    <div style="background:var(--kp-paper);border:3px double var(--kp-ink);padding:36px 32px;text-align:center">
+    <div class="note-card" style="background:var(--kp-paper);border:3px double var(--kp-ink);padding:36px 32px;text-align:center">
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.3em;color:var(--kp-rust-2);text-transform:uppercase">— ${n.h} —</div>
       <h3 style="font-family:var(--font-display);font-size:42px;text-transform:uppercase;margin:12px 0 20px;letter-spacing:0.02em">${n.h}</h3>
       <p style="font-family:var(--font-serif);font-style:italic;font-size:16px;line-height:1.6;color:var(--kp-ink-soft);margin:0;text-align:center">${n.body}</p>
@@ -58,7 +57,7 @@ function renderShopTastingNotes() {
     <div class="eyebrow">— From the label —</div>
     <div class="ribbon-title" style="margin-top:14px">Tasting Notes</div>
   </div>
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+  <div class="tasting-notes" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
     ${noteCards}
   </div>
 </section>`;

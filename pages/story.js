@@ -38,7 +38,7 @@ function renderStoryTimeline() {
     </div>`).join('');
 
   return `
-<section class="section section-paper-aged" style="padding-top:100px">
+<section class="section section-paper-aged" style="padding-top:100px;padding-bottom:100px">
   <div class="section-head">
     <div class="eyebrow">— A short history —</div>
     <div class="ribbon-title" style="margin-top:14px">The Timeline</div>
@@ -101,7 +101,7 @@ function renderStoryRecipes() {
   }).join('');
 
   return `
-<section class="section section-dark" style="padding-top:100px">
+<section class="section section-dark" style="padding-top:100px;padding-bottom:100px">
   <div class="section-head">
     <div class="eyebrow light">— How to drink it —</div>
     <div class="ribbon-title" style="margin-top:14px">The Recipes</div>
