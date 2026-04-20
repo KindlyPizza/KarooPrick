@@ -138,6 +138,14 @@
 - `.contact-block .v` — serif value text inside a contact block
 - `.contact-form` — aged-paper bordered contact form panel
 
+## Utility Classes (from colors_and_type.css)
+- `.kp-banner` — applies the primary banner red (`--kp-banner-red`) as background colour
+- `.kp-ribbon` — applies the ochre/gold ribbon colour (`--kp-ochre`) as background colour
+- `.kp-rule` — thin horizontal rule styled with the ink colour
+- `.kp-paper` — sets background to the aged-paper tone (`--kp-paper`)
+- `.kp-eyebrow` — small-caps, tracked monospaced label treatment (inline use)
+- `.kp-smcaps` — forces small-caps (`font-variant: small-caps`) on any text element
+
 ## Utilities
 - `.center` — `text-align: center`
 - `.divider-ornate` — centred ornamental divider with flanking rules

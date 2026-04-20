@@ -817,6 +817,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* Tweaks panel */
+/* DEV ONLY — remove before go-live */
 .tweaks {
   position: fixed; bottom: 24px; right: 24px; z-index: 150;
   background: var(--kp-paper);

@@ -29,8 +29,6 @@
   font-display: swap;
 }
 
-/* Google Font substitutes (flagged — see README) */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IM+Fell+English:ital@0;1&family=Alfa+Slab+One&family=Special+Elite&display=swap');
 
 :root {
   /* ------------------------------------------------------------
