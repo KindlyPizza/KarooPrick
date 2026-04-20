@@ -89,7 +89,7 @@ function renderHomeProducts() {
         <div class="desc">${p.desc}</div>
         <div class="meta">
           <div class="price">${p.price}</div>
-          <div class="abv">Find stockists →</div>
+          <a href="#/contact" class="stockist-link">Find stockists →</a>
         </div>
       </div>
     </div>`).join('');
@@ -120,11 +120,9 @@ function renderHomeServe() {
     <div class="serve-card">
       <div class="eyebrow">— The serve —</div>
       <h2>Cold tonic.<br>Fresh mint.<br>A lemon twist.</h2>
-      <p style="font-family:var(--font-serif);font-style:italic;font-size:18px;color:var(--kp-ink-soft);line-height:1.6;max-width:460px">
-        Serve over heavy ice in a copa glass. Do not complicate it. The fruit has done most of the work.
-      </p>
+      <p style="font-family:var(--font-serif);font-style:italic;font-size:18px;color:var(--kp-ink-soft);line-height:1.6;max-width:460px">${recipe.note}</p>
       <div class="serve-recipe">
-        <h4>— The house serve —</h4>
+        <h4>— ${recipe.name} —</h4>
         <ul>
           ${ingredients}
           <li><span>Heavy ice</span><span class="qty">plenty</span></li>
@@ -148,17 +146,15 @@ window.renderHome = function renderHome() {
 
 window.initHome = function initHome() {
   function initFadeUps() {
-    document.querySelectorAll('.fadeup').forEach(function(el) {
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            obs.disconnect();
-          }
-        });
-      }, { threshold: 0.15 });
-      obs.observe(el);
-    });
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fadeup').forEach(function(el) { obs.observe(el); });
   }
 
   initFadeUps();
