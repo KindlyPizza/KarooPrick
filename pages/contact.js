@@ -2,10 +2,6 @@
 
 // Internal helper — not exposed on window
 function renderStockistResults(filtered, all) {
-  // Update count div
-  document.getElementById('stockist-count').textContent =
-    'Showing ' + filtered.length + ' of ' + all.length;
-
   if (filtered.length === 0) {
     return '<div style="padding:80px 40px;text-align:center;border:1px solid var(--kp-ink);background:var(--kp-paper);font-family:var(--font-serif);font-style:italic;font-size:20px;color:var(--kp-rust-2)">No stockists match. Try a different town.</div>';
   }
@@ -17,11 +13,13 @@ function renderStockistResults(filtered, all) {
     grouped[s.town].push(s);
   });
 
+  var serial = 1;
   return Object.keys(grouped).map(function(town) {
     var list = grouped[town];
     var items = list.map(function(s) {
+      var num = String(serial++).padStart(2, '0');
       return '<div class="stockist">' +
-        '<div class="town">№ ' + String(all.indexOf(s) + 1).padStart(2, '0') + '</div>' +
+        '<div class="town">№ ' + num + '</div>' +
         '<div class="name">' + s.name + '</div>' +
         '<div class="addr">' + s.addr + '</div>' +
         '<div class="tags">' + s.tags.map(function(t) { return '<span>' + t + '</span>'; }).join('') + '</div>' +
@@ -44,7 +42,11 @@ window.renderContact = function() {
   var STOCKISTS = data.STOCKISTS;
   var CONTACT = data.CONTACT;
 
-  var allTags = ['All', 'Retail', 'Bar', 'Tastings', 'Online', 'Local', 'Gifting'];
+  var tagSet = {};
+  STOCKISTS.forEach(function(s) {
+    s.tags.forEach(function(t) { tagSet[t] = true; });
+  });
+  var allTags = ['All'].concat(Object.keys(tagSet).sort());
 
   var tagChips = allTags.map(function(t) {
     return '<div class="chip' + (t === 'All' ? ' active' : '') + '" data-tag="' + t + '">' + t + '</div>';
@@ -169,6 +171,9 @@ window.initContact = function() {
 
   function update() {
     var filtered = getFiltered();
+    // Count update (moved from renderStockistResults)
+    document.getElementById('stockist-count').textContent =
+      'Showing ' + filtered.length + ' of ' + all.length;
     document.getElementById('stockist-results').innerHTML = renderStockistResults(filtered, all);
     // Update chip active states
     document.querySelectorAll('#tag-chips .chip').forEach(function(chip) {
@@ -206,8 +211,12 @@ window.initContact = function() {
           '<div style="font-size:56px;color:var(--kp-banner-red);margin-bottom:16px">❦</div>' +
           '<h3 style="font-family:var(--font-display);font-size:32px;text-transform:uppercase;color:var(--kp-ink);margin:0 0 16px;letter-spacing:0.02em">Letter received.</h3>' +
           '<p style="font-family:var(--font-serif);font-style:italic;font-size:17px;color:var(--kp-ink-soft);line-height:1.6;max-width:360px;margin:0 auto 24px">Thank you. We\'ll reply within the week, usually within two days. In the meantime — pour yourself something.</p>' +
-          '<button class="btn" onclick="location.reload()">Write another</button>' +
+          '<button class="btn" id="write-another-btn">Write another</button>' +
         '</div>';
+      var writeAnotherBtn = document.getElementById('write-another-btn');
+      if (writeAnotherBtn) {
+        writeAnotherBtn.addEventListener('click', function() { location.reload(); });
+      }
     });
   }
 };
