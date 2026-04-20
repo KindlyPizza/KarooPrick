@@ -875,3 +875,52 @@ img { display: block; max-width: 100%; }
   padding: 36px 32px;
   text-align: center;
 }
+
+/* ============================================================
+   Responsive — Mobile (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav { padding: 0 16px; }
+  .nav-left, .nav-right { display: none; }
+  .nav-wordmark { font-size: 1.4rem; }
+
+  /* Sections */
+  .section { padding-left: 16px; padding-right: 16px; }
+
+  /* Hero */
+  .hero-content { padding: 0 16px; }
+  .hero-wrap h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .hero-meta { display: none; }
+
+  /* Story two-column → single column */
+  .story { grid-template-columns: 1fr; }
+  .story-img { min-height: 240px; }
+
+  /* Botanicals grid → 2 columns */
+  .botanicals { grid-template-columns: repeat(2, 1fr); }
+
+  /* Products grid → single column */
+  .products { grid-template-columns: 1fr; }
+
+  /* Recipes grid → single column */
+  .recipes { grid-template-columns: 1fr; }
+
+  /* Stockist search layout → stack */
+  .stockist-wrap { grid-template-columns: 1fr; }
+  .stockist-list { grid-template-columns: 1fr !important; }
+
+  /* Contact wrap → stack */
+  .contact-wrap { grid-template-columns: 1fr; }
+
+  /* Footer grid → 2 columns or stack */
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Tasting notes → already handled by .tasting-notes media query added earlier, skip */
+
+  /* Page heroes */
+  .page-hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+
+  /* Serve card */
+  .serve-inner { padding: 40px 16px; }
+}
