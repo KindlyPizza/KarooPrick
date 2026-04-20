@@ -20,7 +20,7 @@ img { display: block; max-width: 100%; }
   position: fixed; inset: 0; z-index: 200;
   background:
     radial-gradient(ellipse at center, rgba(58,26,12,0.78), rgba(14,8,5,0.96)),
-    url('assets/karoo-prick-rocks-sm.jpg') center/cover no-repeat fixed;
+    url('../assets/img/karoo-prick-rocks-sm.jpg') center/cover no-repeat fixed;
   display: flex; align-items: center; justify-content: center;
   transition: opacity 400ms cubic-bezier(0.6,0.05,0.35,1);
 }
@@ -257,7 +257,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-img {
   position: absolute; inset: -40px;
-  background: url('assets/karoo-prick-rocks-sm.jpg') center/cover no-repeat;
+  background: url('../assets/img/karoo-prick-rocks-sm.jpg') center/cover no-repeat;
   animation: kenburns 24s ease-in-out infinite alternate;
   will-change: transform;
 }
@@ -363,7 +363,7 @@ img { display: block; max-width: 100%; }
 .story-img {
   position: relative;
   aspect-ratio: 4/5;
-  background: url('assets/karoo-prick-rocks-sm.jpg') center/cover no-repeat;
+  background: url('../assets/img/karoo-prick-rocks-sm.jpg') center/cover no-repeat;
   box-shadow: var(--shadow-deep);
   filter: sepia(0.1);
 }
@@ -485,7 +485,7 @@ img { display: block; max-width: 100%; }
 
 /* --- Serve / Cocktails --- */
 .serve {
-  background: url('assets/karoo-prick-group-sm.jpg') center/cover no-repeat;
+  background: url('../assets/img/karoo-prick-group-sm.jpg') center/cover no-repeat;
   min-height: 640px;
   position: relative;
   padding: 120px 48px;
@@ -570,7 +570,7 @@ img { display: block; max-width: 100%; }
 .page-hero.dark {
   background: var(--kp-rust-3);
   color: var(--kp-karoo-bone);
-  background-image: linear-gradient(180deg, rgba(14,8,5,0.4), rgba(14,8,5,0.8)), url('assets/karoo-prick-rocks-sm.jpg');
+  background-image: linear-gradient(180deg, rgba(14,8,5,0.4), rgba(14,8,5,0.8)), url('../assets/img/karoo-prick-rocks-sm.jpg');
   background-size: cover;
   background-position: center;
 }
