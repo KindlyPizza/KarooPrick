@@ -36,7 +36,7 @@ function renderHomeStory() {
 '<section class="section" style="padding-top:160px">' +
 '  <div class="story">' +
 '    <div class="fadeup">' +
-'      <img src="assets/img/dom-logan-portrait.jpg" alt="Dom Logan \u2014 founder of Karoo Prick Co." style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">' +
+'      <img src="assets/img/dom-logan-portrait.jpeg" alt="Dom Logan \u2014 founder of Karoo Prick Co." style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">' +
 '    </div>' +
 '    <div class="fadeup">' +
 '      <div class="eyebrow">' + COPY.story_eyebrow + '</div>' +
@@ -57,7 +57,7 @@ function renderHomePear() {
 '<section class="section section-paper-aged" style="padding-top:140px;padding-bottom:140px">' +
 '  <div class="story">' +
 '    <div class="fadeup">' +
-'      <div style="width:100%;height:460px;background:url(assets/img/karoo-landscape-windmill.jpg) center/cover no-repeat;border:1px solid var(--kp-ink)"></div>' +
+'      <div style="width:100%;height:460px;background:url(assets/img/prickly-pear-cactus.jpeg) center/cover no-repeat;border:1px solid var(--kp-ink)"></div>' +
 '    </div>' +
 '    <div class="fadeup">' +
 '      <div class="eyebrow">' + COPY.pear_eyebrow + '</div>' +
@@ -82,7 +82,7 @@ function renderHomeCraft() {
 '      <p>' + COPY.craft_p2 + '</p>' +
 '    </div>' +
 '    <div class="fadeup">' +
-'      <div style="width:100%;height:460px;background:url(assets/img/karoo-prick-group-sm.jpg) center/cover no-repeat;border:1px solid var(--kp-ink)"></div>' +
+'      <div style="width:100%;height:460px;background:url(assets/img/karoo-prick-classic-hero.jpeg) center/cover no-repeat;border:1px solid var(--kp-ink)"></div>' +
 '    </div>' +
 '  </div>' +
 '</section>';

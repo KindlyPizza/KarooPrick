@@ -261,7 +261,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-img {
   position: absolute; inset: -40px;
-  background: url('../assets/img/karoo-prick-rocks-sm.jpg') center/cover no-repeat;
+  background: url('../assets/img/karoo-landscape-windmill.jpeg') center/cover no-repeat;
   animation: kenburns 24s ease-in-out infinite alternate;
   will-change: transform;
 }
@@ -367,7 +367,7 @@ img { display: block; max-width: 100%; }
 .story-img {
   position: relative;
   aspect-ratio: 4/5;
-  background: url('../assets/img/karoo-prick-rocks-sm.jpg') center/cover no-repeat;
+  background: url('../assets/img/dom-logan-portrait.jpeg') center/cover no-repeat;
   box-shadow: var(--shadow-deep);
   filter: sepia(0.1);
 }
@@ -489,7 +489,7 @@ img { display: block; max-width: 100%; }
 
 /* --- Serve / Cocktails --- */
 .serve {
-  background: url('../assets/img/karoo-prick-group-sm.jpg') center/cover no-repeat;
+  background: url('../assets/img/karoo-prick-cocktail.jpeg') center/cover no-repeat;
   min-height: 640px;
   position: relative;
   padding: 120px 48px;
@@ -574,7 +574,7 @@ img { display: block; max-width: 100%; }
 .page-hero.dark {
   background: var(--kp-rust-3);
   color: var(--kp-karoo-bone);
-  background-image: linear-gradient(180deg, rgba(14,8,5,0.4), rgba(14,8,5,0.8)), url('../assets/img/karoo-prick-rocks-sm.jpg');
+  background-image: linear-gradient(180deg, rgba(14,8,5,0.4), rgba(14,8,5,0.8)), url('../assets/img/desert-landscape.jpeg');
   background-size: cover;
   background-position: center;
 }

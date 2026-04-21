@@ -4,10 +4,10 @@
 function renderShopHero() {
   var COPY = window.KP_DATA.COPY;
   return '' +
-'<section class="shop-hero">' +
-'  <div class="eyebrow">' + COPY.shop_eyebrow + '</div>' +
-'  <h1>' + COPY.shop_headline + '</h1>' +
-'  <div class="lede">' + COPY.shop_lede + '</div>' +
+'<section class="shop-hero" style="background-image:linear-gradient(180deg,rgba(14,8,5,0.35),rgba(14,8,5,0.65)),url(assets/img/karoo-prick-candy-hero.jpeg);background-size:cover;background-position:center;color:var(--kp-paper)">' +
+'  <div class="eyebrow" style="color:rgba(244,235,214,0.7)">' + COPY.shop_eyebrow + '</div>' +
+'  <h1 style="color:var(--kp-paper)">' + COPY.shop_headline + '</h1>' +
+'  <div class="lede" style="color:rgba(244,235,214,0.85)">' + COPY.shop_lede + '</div>' +
 '</section>';
 }
 

@@ -18,7 +18,7 @@ function renderStoryOrigin() {
 <section class="section">
   <div class="story">
     <div class="fadeup">
-      <img src="assets/img/dom-logan-portrait.jpg" alt="Dom Logan — founder of Karoo Prick Co."
+      <img src="assets/img/dom-logan-portrait.jpeg" alt="Dom Logan — founder of Karoo Prick Co."
         style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">
     </div>
     <div class="fadeup">
@@ -49,7 +49,10 @@ function renderStoryBotanicals() {
   <div class="section-head">
     <div class="fadeup"><div class="eyebrow">— What's inside —</div></div>
     <div class="fadeup" style="margin-top:14px"><div class="ribbon-title">The Botanicals</div></div>
-    <div class="fadeup"><div class="subtitle">Seven botanicals. One fruit. Forty kilometres from still to bottle.</div></div>
+    <div class="fadeup"><div class="subtitle">Five botanicals. One wild cactus fruit. Distilled in the Karoo.</div></div>
+  </div>
+  <div class="fadeup" style="margin:48px 0;width:100%;max-height:340px;overflow:hidden;border:1px solid var(--kp-ink)">
+    <img src="assets/img/botanicals-plate.jpeg" alt="Karoo Prick botanicals" style="width:100%;display:block;object-fit:cover;object-position:center 40%">
   </div>
   <div class="botanicals">
     ${botanicalCards}
