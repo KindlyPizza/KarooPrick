@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Expand-Archive -Path 'D:\\\\Downloads\\\\Website-handoff.zip' -DestinationPath 'C:\\\\Users\\\\Bertrand Logan\\\\Git\\\\KarooPrick\\\\__zip_tmp' -Force\")",
+      "Bash(powershell -ExecutionPolicy Bypass -Command \"Get-ChildItem -Recurse 'C:\\\\Users\\\\Bertrand Logan\\\\Git\\\\KarooPrick\\\\__zip_tmp' | Select-Object FullName\")",
+      "Bash(pandoc \"D:\\\\Downloads\\\\new website text.docx\" -t plain)"
+    ]
+  }
+}
