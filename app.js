@@ -37,8 +37,8 @@
     };
     inits[route]();
 
-    // 5. Scroll to top (instant, no animation)
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    // 5. Scroll to top (instant, cross-browser safe form)
+    window.scrollTo(0, 0);
   }
 
   function start() {
@@ -50,16 +50,24 @@
     render(getRoute());
   });
 
+  // Safe localStorage wrapper — Firefox throws SecurityError in private mode
+  function storageGet(key) {
+    try { return localStorage.getItem(key); } catch(e) { return null; }
+  }
+  function storageSet(key, val) {
+    try { localStorage.setItem(key, val); } catch(e) { /* private mode — ignore */ }
+  }
+
   // Boot on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', function() {
     // Check age gate
-    if (localStorage.getItem('kp_age') !== 'ok') {
+    if (storageGet('kp_age') !== 'ok') {
       window.showAgeGate(
         function() {               // onPass: age verified, persist and render the site
-          localStorage.setItem('kp_age', 'ok');
+          storageSet('kp_age', 'ok');
           start();
         },
-        function() {               // onFail: redirect away or show message
+        function() {               // onFail: redirect away
           window.location.href = 'https://www.drinkaware.co.uk/';
         }
       );
