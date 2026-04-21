@@ -457,10 +457,9 @@ img { display: block; max-width: 100%; }
 .product-img {
   aspect-ratio: 3/4;
   background: linear-gradient(180deg, var(--kp-karoo-dust), var(--kp-paper));
-  display: flex; align-items: center; justify-content: center;
   margin-bottom: 28px; overflow: hidden;
 }
-.product-img img { height: 100%; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; mix-blend-mode: multiply; }
 .product .vol {
   font-family: var(--font-mono); font-size: 10px;
   letter-spacing: 0.3em; color: var(--kp-rust-2); margin-bottom: 8px;
