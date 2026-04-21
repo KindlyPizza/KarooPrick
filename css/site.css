@@ -679,6 +679,7 @@ img { display: block; max-width: 100%; }
 .recipe-body li {
   padding: 8px 0; border-bottom: 1px dotted var(--kp-rust-2);
   font-family: var(--font-serif); font-size: 14px;
+  color: var(--kp-ink);
   display: flex; justify-content: space-between;
 }
 .recipe-body li:last-child { border: 0; }

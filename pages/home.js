@@ -144,31 +144,39 @@ function renderHomeTasting() {
 }
 
 function renderHomeServe() {
-  var COPY = window.KP_DATA.COPY;
-  var serves = [
-    { title: COPY.serve_title_1, body: COPY.serve_body_1 },
-    { title: COPY.serve_title_2, body: COPY.serve_body_2 },
-    { title: COPY.serve_title_3, body: COPY.serve_body_3 },
-  ];
-  var serveItems = serves.map(function(s, i) {
+  var RECIPES = window.KP_DATA.RECIPES;
+  var recipeCards = RECIPES.map(function(r) {
+    var ingredients = r.ingredients.map(function(i) {
+      return '<li><span>' + i.item + '</span><span class="qty">' + i.qty + '</span></li>';
+    }).join('');
     return '' +
-'    <div class="fadeup" style="padding:40px;border:1px solid rgba(244,235,214,0.15);background:rgba(244,235,214,0.04)">' +
-'      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--kp-rust-2);margin-bottom:12px">0' + (i+1) + '</div>' +
-'      <div style="font-family:var(--font-display);font-size:26px;text-transform:uppercase;letter-spacing:0.04em;color:var(--kp-paper);margin-bottom:16px">' + s.title + '</div>' +
-'      <p style="font-family:var(--font-serif);font-size:16px;color:rgba(244,235,214,0.75);line-height:1.7;margin:0">' + s.body + '</p>' +
+'    <div class="fadeup">' +
+'      <div class="recipe">' +
+'        <div class="recipe-top">' +
+'          <div class="num">\u2116 ' + r.num + '</div>' +
+'          <h3>' + r.name + '</h3>' +
+'          <div class="sub">\u2014 ' + r.sub + ' \u2014</div>' +
+'        </div>' +
+'        <div class="recipe-body">' +
+'          <h5>\u2014 Build \u2014</h5>' +
+'          <ul>' + ingredients + '</ul>' +
+'          <h5>\u2014 Glass \u00b7 Ice \u2014</h5>' +
+'          <p style="margin-bottom:14px">' + r.glass + ' ' + r.ice + '</p>' +
+'          <h5>\u2014 Method \u2014</h5>' +
+'          <p>' + r.note + '</p>' +
+'        </div>' +
+'      </div>' +
 '    </div>';
   }).join('');
 
   return '' +
-'<section class="serve" style="padding:120px 0">' +
-'  <div class="serve-inner" style="max-width:1100px;margin:0 auto;padding:0 40px">' +
-'    <div class="fadeup" style="text-align:center;margin-bottom:64px">' +
-'      <div class="eyebrow" style="color:var(--kp-rust-2)">— How to Serve —</div>' +
-'      <h2 style="font-family:var(--font-display);font-size:clamp(32px,4vw,52px);text-transform:uppercase;color:var(--kp-paper);letter-spacing:0.04em;margin-top:14px">Three Ways to Enjoy</h2>' +
-'    </div>' +
-'    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">' +
-       serveItems +
-'    </div>' +
+'<section class="section section-dark" style="padding-top:100px;padding-bottom:100px">' +
+'  <div class="section-head">' +
+'    <div class="eyebrow light">\u2014 How to drink it \u2014</div>' +
+'    <div class="ribbon-title" style="margin-top:14px">The Recipes</div>' +
+'  </div>' +
+'  <div class="recipes">' +
+     recipeCards +
 '  </div>' +
 '</section>';
 }
