@@ -90,11 +90,10 @@ const STOCKISTS = [
 const CONTACT = {
   email:    'info@karooprick.co.za',
   trade:    'trade@karooprick.co.za',
-  phone:    '082 8555345',
-  address:  ['The Karoo Prick Co.', 'TODO: confirm postal address', 'South Africa'],
+  phone:    '064 118 3058',
   tasting:  'Fridays & Saturdays \u00b7 10h\u201316h \u00b7 By appointment',
-  facebook: 'https://www.facebook.com/karooprick',   // TODO: confirm correct URL with Dom
-  instagram: 'https://www.instagram.com/karooprick', // TODO: confirm correct URL with Dom
+  facebook: 'https://www.facebook.com/karooprickco',
+  instagram: 'https://www.instagram.com/karooprick_gin/',
 };
 
 const COPY = {

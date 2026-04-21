@@ -4,10 +4,6 @@ window.renderFooter = function renderFooter() {
   var contact = window.KP_DATA.CONTACT;
   var copy = window.KP_DATA.COPY;
 
-  var addressLines = contact.address.map(function (line) {
-    return '<div>' + line + '</div>';
-  }).join('');
-
   var socialLinks = '';
   if (contact.facebook || contact.instagram) {
     socialLinks = '<div class="footer-social" style="margin-top:16px;display:flex;gap:16px">' +
@@ -28,8 +24,9 @@ window.renderFooter = function renderFooter() {
 
     '    <div class="footer-col">',
     '      <h4>The Spirits</h4>',
+    '      <a href="#/shop">Prickly Pear Gin \u00b7 Special Edition</a>',
     '      <a href="#/shop">Prickly Pear Gin \u00b7 750ml</a>',
-    '      <a href="#/shop">Prickly Pear Gin \u00b7 500ml (Crated)</a>',
+    '      <a href="#/shop">Prickly Pear Gin \u00b7 500ml</a>',
     '      <a href="#/shop">Candy Liqueur</a>',
     '    </div>',
 
@@ -42,10 +39,10 @@ window.renderFooter = function renderFooter() {
     '    </div>',
 
     '    <div class="footer-col">',
-    '      <h4>Post</h4>',
-    '      ' + addressLines,
+    '      <h4>Contact</h4>',
     '      <div class="footer-phone">' + contact.phone + '</div>',
     '      <div class="footer-email">' + contact.email + '</div>',
+    '      <div class="footer-email">' + contact.trade + '</div>',
     '    </div>',
 
     '  </div>',

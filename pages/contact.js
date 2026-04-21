@@ -6,8 +6,6 @@ window.renderContact = function() {
   var CONTACT = data.CONTACT;
   var COPY = data.COPY;
 
-  var addressLines = CONTACT.address.join('<br>');
-
   var socialBlock = '';
   if (CONTACT.facebook || CONTACT.instagram) {
     var links = [];
@@ -35,10 +33,6 @@ window.renderContact = function() {
           '<div class="eyebrow">\u2014 Get in touch \u2014</div>' +
           '<h2>Write to us.</h2>' +
           '<p>For wholesale, press, tastings, distillery tour, or anything else. We answer in the order they arrive.</p>' +
-          '<div class="contact-block">' +
-            '<h4>\u2014 By post \u2014</h4>' +
-            '<div class="v">' + addressLines + '</div>' +
-          '</div>' +
           '<div class="contact-block">' +
             '<h4>\u2014 By telephone \u2014</h4>' +
             '<div class="v">' + CONTACT.phone + '</div>' +
