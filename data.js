@@ -1,13 +1,13 @@
 // =============================================================
 // Karoo Prick Co. — Site Data
 // Edit this file to update product info, stockists, and copy.
-// Narrative copy marked TODO: should be reviewed by Dom Logan.
 // =============================================================
 
 const PRODUCTS = [
-  { id: "gin-750",  title: "Prickly Pear Gin",                volume: "750 ml", abv: "43% vol", price: "R 690", badge: null,      desc: "Built on a classic gin base of juniper, coriander, cappia bark, angelica root, and cardamom, this gin stays true to tradition. The addition of prickly pear attracts immediate attention with inspiration coming from the sweet kitsch feel of small-town Karoo shops." },
-  { id: "gin-500",  title: "Prickly Pear Gin \u2014 Limited Edition", volume: "500 ml", abv: "43% vol", price: "R 480", badge: "Crated",  desc: "Same spirit, smaller bottle. Hand-built timber crate with rope binding." },
-  { id: "liqueur",  title: "Candy Liqueur",                   volume: "500 ml", abv: "24% vol", price: "R 520", badge: "New",     desc: "The sweeter side of the cactus. Made from ripe prickly pear fruit, this liqueur is rich, playful, and dangerously easy to enjoy. Sip it neat, mix it boldly, or save it for when rules feel optional." },
+  { id: "gin-700-special", title: "Prickly Pear Gin \u2014 Special Edition", volume: "700 ml", abv: "43% vol", price: "R 690", badge: "Special", img: "assets/img/karoo-prick-bottle-gin.jpg", desc: "A commemorative release in honour of Dom Logan \u2014 the imagineer, maker, and spirit behind every bottle of Karoo Prick. The same gin he built, bottled in his memory. Bold, layered, and deeply Karoo." },
+  { id: "gin-750",         title: "Prickly Pear Gin",                        volume: "750 ml", abv: "43% vol", price: "R 690", badge: null,      img: "assets/img/karoo-prick-bottle-gin.jpg", desc: "Built on a classic gin base of juniper, coriander, cappia bark, angelica root, and cardamom, this gin stays true to tradition. The addition of prickly pear attracts immediate attention with inspiration coming from the sweet kitsch feel of small-town Karoo shops." },
+  { id: "gin-500",         title: "Prickly Pear Gin \u2014 500ml",            volume: "500 ml", abv: "43% vol", price: "R 480", badge: null,      img: "assets/img/karoo-prick-bottle-gin.jpg", desc: "The same spirit, a smaller bottle. A perfect introduction to the Karoo, or a companion for a single weekend." },
+  { id: "liqueur",         title: "Candy Liqueur",                            volume: "500 ml", abv: "24% vol", price: "R 520", badge: "New",     img: "assets/img/karoo-prick-cocktail.jpg",    desc: "The sweeter side of the cactus. Made from ripe prickly pear fruit, this liqueur is rich, playful, and dangerously easy to enjoy. Sip it neat, mix it boldly, or save it for when rules feel optional." },
 ];
 
 const BOTANICALS = [
@@ -193,7 +193,7 @@ const COPY = {
   contact_form_btn: 'Send Message \u2192',
 
   // ---------------------------------------------------------------
-  // STORY page (TODO placeholders for Dom Logan to fill in)
+  // STORY page (TODO placeholders — to be filled in)
   // ---------------------------------------------------------------
   story_page_lede: 'TODO: [1-sentence brand lede for the story page]',
   origin_h2:       'A fruit\nnobody wanted.',

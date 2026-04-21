@@ -36,7 +36,7 @@ function renderHomeStory() {
 '<section class="section" style="padding-top:160px">' +
 '  <div class="story">' +
 '    <div class="fadeup">' +
-'      <div class="story-img"></div>' +
+'      <img src="assets/img/dom-logan-portrait.jpg" alt="Dom Logan \u2014 founder of Karoo Prick Co." style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">' +
 '    </div>' +
 '    <div class="fadeup">' +
 '      <div class="eyebrow">' + COPY.story_eyebrow + '</div>' +
@@ -57,7 +57,7 @@ function renderHomePear() {
 '<section class="section section-paper-aged" style="padding-top:140px;padding-bottom:140px">' +
 '  <div class="story">' +
 '    <div class="fadeup">' +
-'      <div style="width:100%;height:460px;background:url(assets/img/cactus-fruit-pink.webp) center/cover no-repeat;border:1px solid var(--kp-ink)"></div>' +
+'      <div style="width:100%;height:460px;background:url(assets/img/karoo-landscape-windmill.jpg) center/cover no-repeat;border:1px solid var(--kp-ink)"></div>' +
 '    </div>' +
 '    <div class="fadeup">' +
 '      <div class="eyebrow">' + COPY.pear_eyebrow + '</div>' +
@@ -98,7 +98,7 @@ function renderHomeProducts() {
 '      <div class="product">' +
         (p.badge ? '<div class="badge">' + p.badge + '</div>' : '') +
 '        <div class="product-img">' +
-'          <img src="assets/img/karoo-prick-bottle-sm.jpg" alt="' + p.title + '" loading="lazy">' +
+'          <img src="' + (p.img || 'assets/img/karoo-prick-bottle-sm.jpg') + '" alt="' + p.title + '" loading="lazy">' +
 '        </div>' +
 '        <div class="vol">' + p.volume + ' \u00b7 ' + p.abv + '</div>' +
 '        <div class="title">' + p.title + '</div>' +

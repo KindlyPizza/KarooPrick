@@ -17,7 +17,10 @@ function renderStoryOrigin() {
   return `
 <section class="section">
   <div class="story">
-    <div class="fadeup"><div class="story-img"></div></div>
+    <div class="fadeup">
+      <img src="assets/img/dom-logan-portrait.jpg" alt="Dom Logan — founder of Karoo Prick Co."
+        style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">
+    </div>
     <div class="fadeup">
       <div class="eyebrow">${COPY.origin_eyebrow}</div>
       <h2>${h2}</h2>

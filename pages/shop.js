@@ -20,7 +20,7 @@ function renderShopProducts() {
 '      <div class="product">' +
         (p.badge ? '<div class="badge">' + p.badge + '</div>' : '') +
 '        <div class="product-img">' +
-'          <img src="assets/img/karoo-prick-bottle-sm.jpg" alt="' + p.title + '" loading="lazy">' +
+'          <img src="' + (p.img || 'assets/img/karoo-prick-bottle-sm.jpg') + '" alt="' + p.title + '" loading="lazy">' +
 '        </div>' +
 '        <div class="title">' + p.title + '</div>' +
 '        <div class="desc">' + p.desc + '</div>' +
