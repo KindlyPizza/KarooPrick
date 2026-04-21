@@ -111,8 +111,8 @@ const COPY = {
   // ---------------------------------------------------------------
   story_eyebrow:   '\u2014 Our Story \u2014',
   story_h2:        'The Karoo\nteaches patience.',
-  story_p1:        'The Karoo teaches patience. Things grow slowly here. Flavours deepen. And if you rush, you usually get pricked. The business was founded by Dom Logan, an imagineer and maker with a curiosity for wild things and a soft spot for plants that don\u2019t behave. His focus turned to the prickly pear \u2014 tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care.',
-  story_p2:        'Sweet, sharp, made with intention \u2014 just like the man and land that inspired it.',
+  story_p1:        'The Karoo teaches patience. Things grow slowly here. Flavours deepen. And if you rush, you usually get pricked. The business was founded by Dom Logan, an imagineer and maker with a curiosity for wild things and a soft spot for plants that don\u2019t behave.',
+  story_p2:        'His focus turned to the prickly pear \u2014 tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care.',
   story_pull:      '\u2018All good things are wild and free\u2019 \u2014 Henry David Thoreau',
 
   // ---------------------------------------------------------------
@@ -165,7 +165,7 @@ const COPY = {
   // ---------------------------------------------------------------
   shop_eyebrow:    '\u2014 The Collection \u2014',
   shop_headline:   'Our Spirits',
-  shop_lede:       'We make three. The flagship gin, its smaller crated sibling, and \u2014 new this season \u2014 a prickly pear candy liqueur for the late hours.',
+  shop_lede:       'We make four. A commemorative Special Edition, the 750ml flagship, a 500ml, and \u2014 new this season \u2014 a prickly pear Candy Liqueur.',
   shop_product_cta: 'Enquire to Order',
   tasting_section_headline: 'A Symphony of Wild Sweetness',
   small_batch_body: 'Our still holds 400 litres. We run it twice a week. When we run out, we run out. The next batch is ready when it\u2019s ready.',
@@ -193,22 +193,22 @@ const COPY = {
   contact_form_btn: 'Send Message \u2192',
 
   // ---------------------------------------------------------------
-  // STORY page (TODO placeholders — to be filled in)
+  // STORY page
   // ---------------------------------------------------------------
-  story_page_lede: 'TODO: [1-sentence brand lede for the story page]',
+  story_page_lede: 'Sweet, sharp, made with intention \u2014 just like the man and land that inspired it.',
   origin_h2:       'A fruit\nnobody wanted.',
   origin_eyebrow:  '\u2014 How it started \u2014',
-  origin_p1:       'TODO: [Origin story paragraph 1 \u2014 ~80 words about the Opuntia cactus and the farm]',
-  origin_p2:       'TODO: [Origin story paragraph 2 \u2014 ~60 words about the first batches and how the gin came to be]',
-  origin_pull:     'TODO: [Pull-quote from Dom \u2014 memorable line about persistence or craft]',
-  closing_h2:      'TODO: [Closing italic quote for the Story page \u2014 poetic, brand-voice]',
+  origin_p1:       'The Karoo teaches patience. Things grow slowly here. Flavours deepen. And if you rush, you usually get pricked. Dom Logan was an imagineer and maker with a curiosity for wild things and a soft spot for plants that don\u2019t behave.',
+  origin_p2:       'His focus turned to the prickly pear \u2014 tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care. Built on a classic gin base, the prickly pear attracts immediate attention \u2014 inspired by the sweet kitsch feel of small-town Karoo shops.',
+  origin_pull:     'Because good things aren\u2019t always polite \u2014 and Dom liked a clever play on words. There may have been a naughty donkey involved too.',
+  closing_h2:      'Sweet, sharp, made with intention \u2014 just like the man and land that inspired it.',
 };
 
 const TASTING_NOTES = {
-  nose:    'Intensely fruity, watermelon candy liqueur. Dry fynbos underneath with a faint honey note.',
-  palate:  'Not as sweet as expected \u2014 juicy, fresh, fruity, floral intensity. Buchu blackcurrant, coriander warmth.',
-  finish:  'Crisp and clean. A quiet spice lingers. The pear returns softly.',
-  expert:  'Quintessential Karoo \u2014 a not-so-dry, fruit forward juicy sweet Gin reminiscent of bubblegum and hard boiled watermelon candy.',
+  nose:    'Intensely fruity \u2014 watermelon candy and fresh cactus fruit.',
+  palate:  'Not as sweet as expected. Juicy, fruity intensity that fills the palate. The prickly pear leads; the botanicals follow.',
+  finish:  'Crisp and clean.',
+  expert:  'Quintessentially Karoo \u2014 a not-so-dry, fruit-forward juicy sweet gin reminiscent of bubblegum and hard-boiled watermelon candy.',
 };
 
 // TIMELINE removed from site per design update (Dom Logan, 2026-04).
