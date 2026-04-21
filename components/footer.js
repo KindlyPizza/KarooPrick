@@ -2,10 +2,19 @@
 
 window.renderFooter = function renderFooter() {
   var contact = window.KP_DATA.CONTACT;
+  var copy = window.KP_DATA.COPY;
 
   var addressLines = contact.address.map(function (line) {
     return '<div>' + line + '</div>';
   }).join('');
+
+  var socialLinks = '';
+  if (contact.facebook || contact.instagram) {
+    socialLinks = '<div class="footer-social" style="margin-top:16px;display:flex;gap:16px">' +
+      (contact.facebook ? '<a href="' + contact.facebook + '" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--kp-ink-soft);text-decoration:none">Facebook</a>' : '') +
+      (contact.instagram ? '<a href="' + contact.instagram + '" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--kp-ink-soft);text-decoration:none">Instagram</a>' : '') +
+    '</div>';
+  }
 
   return [
     '<footer class="footer">',
@@ -13,23 +22,22 @@ window.renderFooter = function renderFooter() {
 
     '    <div class="footer-col">',
     '      <div class="brand">Karoo Prick</div>',
-    '      <div class="motto">All good things are wild and free. Small batch distilled in the Karoo, South Africa.</div>',
-    '      <div class="latin">\u2014 Sit Bonum Tempora Volvunt \u2014</div>',
+    '      <div class="motto">' + copy.footer_tagline + '</div>',
+    '      ' + socialLinks,
     '    </div>',
 
     '    <div class="footer-col">',
     '      <h4>The Spirits</h4>',
     '      <a href="#/shop">Prickly Pear Gin \u00b7 750ml</a>',
-    '      <a href="#/shop">Prickly Pear Gin \u00b7 500ml</a>',
-    '      <a href="#/shop">Prickly Pear Liqueur</a>',
-    '      <a href="#/story">Botanicals</a>',
+    '      <a href="#/shop">Prickly Pear Gin \u00b7 500ml (Crated)</a>',
+    '      <a href="#/shop">Candy Liqueur</a>',
     '    </div>',
 
     '    <div class="footer-col">',
     '      <h4>The House</h4>',
     '      <a href="#/story">Our Story</a>',
-    '      <a href="#/story">The Distillery</a>',
-    '      <a href="#/contact">Stockists</a>',
+    '      <a href="#/shop">Products</a>',
+    '      <a href="#/stockists">Stockists</a>',
     '      <a href="#/contact">Contact</a>',
     '    </div>',
 

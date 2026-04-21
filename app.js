@@ -4,7 +4,7 @@
 // ============================================================
 
 (function() {
-  var ROUTES = ['home', 'shop', 'story', 'contact'];
+  var ROUTES = ['home', 'shop', 'story', 'stockists', 'contact'];
   function getRoute() {
     var h = (window.location.hash || '#/home').replace(/^#\/?/, '');
     var r = h.split('/')[0] || 'home';
@@ -18,10 +18,11 @@
 
     // 2. Render page
     var renderers = {
-      home:    window.renderHome,
-      shop:    window.renderShop,
-      story:   window.renderStory,
-      contact: window.renderContact
+      home:      window.renderHome,
+      shop:      window.renderShop,
+      story:     window.renderStory,
+      stockists: window.renderStockists,
+      contact:   window.renderContact
     };
     document.getElementById('main-root').innerHTML = renderers[route]();
 
@@ -30,10 +31,11 @@
 
     // 4. Init page (attaches observers, event handlers)
     var inits = {
-      home:    window.initHome,
-      shop:    window.initShop,
-      story:   window.initStory,
-      contact: window.initContact
+      home:      window.initHome,
+      shop:      window.initShop,
+      story:     window.initStory,
+      stockists: window.initStockists,
+      contact:   window.initContact
     };
     inits[route]();
 

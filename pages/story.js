@@ -29,26 +29,6 @@ function renderStoryOrigin() {
 </section>`;
 }
 
-function renderStoryTimeline() {
-  const { TIMELINE } = window.KP_DATA;
-  const items = TIMELINE.map(t => `
-    <div class="tl-item">
-      <div class="tl-year">${t.y}</div>
-      <div class="tl-title">${t.t}</div>
-      <div class="tl-body">${t.b}</div>
-    </div>`).join('');
-
-  return `
-<section class="section section-paper-aged" style="padding-top:100px;padding-bottom:100px">
-  <div class="section-head">
-    <div class="eyebrow">— A short history —</div>
-    <div class="ribbon-title" style="margin-top:14px">The Timeline</div>
-  </div>
-  <div class="timeline">
-    ${items}
-  </div>
-</section>`;
-}
 
 function renderStoryBotanicals() {
   const { BOTANICALS } = window.KP_DATA;
@@ -130,7 +110,6 @@ window.renderStory = function renderStory() {
   return (
     renderStoryHero() +
     renderStoryOrigin() +
-    renderStoryTimeline() +
     renderStoryBotanicals() +
     renderStoryRecipes() +
     renderStoryClosing()
