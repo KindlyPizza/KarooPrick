@@ -242,7 +242,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-img {
   position: absolute; inset: -40px;
-  background: url('../assets/img/karoo-landscape-windmill.jpeg') center/cover no-repeat;
+  background: url('../assets/img/desert-landscape.jpeg') center/cover no-repeat;
   animation: kenburns 24s ease-in-out infinite alternate;
   will-change: transform;
 }
