@@ -4,10 +4,11 @@
 // ============================================================
 
 (function() {
-  var ROUTES = ['home', 'shop', 'story', 'stockists', 'contact'];
+  var ROUTES = ['home', 'shop', 'stockists', 'contact'];
   function getRoute() {
     var h = (window.location.hash || '#/home').replace(/^#\/?/, '');
     var r = h.split('/')[0] || 'home';
+    if (r === 'story') { window.location.replace('#/home'); return 'home'; }
     return ROUTES.includes(r) ? r : 'home';
   }
 
@@ -20,7 +21,6 @@
     var renderers = {
       home:      window.renderHome,
       shop:      window.renderShop,
-      story:     window.renderStory,
       stockists: window.renderStockists,
       contact:   window.renderContact
     };
@@ -33,7 +33,6 @@
     var inits = {
       home:      window.initHome,
       shop:      window.initShop,
-      story:     window.initStory,
       stockists: window.initStockists,
       contact:   window.initContact
     };

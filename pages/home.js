@@ -15,7 +15,6 @@ function renderHomeHero() {
 '      <div class="latin" style="font-style:italic;max-width:560px;margin:0 auto 32px">' + COPY.hero_lede + '</div>' +
 '      <div class="hero-ctas">' +
 '        <a href="#/shop" class="btn primary">' + COPY.hero_cta_primary + '</a>' +
-'        <a href="#/story" class="btn ghost-on-dark">Our Story</a>' +
 '      </div>' +
 '    </div>' +
 '  </div>' +
@@ -31,20 +30,19 @@ function renderHomeHero() {
 
 function renderHomeStory() {
   var COPY = window.KP_DATA.COPY;
-  var h2 = COPY.story_h2.split('\n').join('<br>');
+  var h2 = COPY.origin_h2.split('\n').join('<br>');
   return '' +
 '<section class="section" style="padding-top:160px">' +
 '  <div class="story">' +
 '    <div class="fadeup">' +
-'      <img src="assets/img/dom-logan-portrait.jpeg" alt="Dom Logan \u2014 founder of Karoo Prick Co." style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">' +
+'      <div class="eyebrow">' + COPY.origin_eyebrow + '</div>' +
+'      <h2>' + h2 + '</h2>' +
+'      <p>' + COPY.origin_p1 + '</p>' +
+'      <p>' + COPY.origin_p2 + '</p>' +
+'      <div class="pull">' + COPY.origin_pull + '</div>' +
 '    </div>' +
 '    <div class="fadeup">' +
-'      <div class="eyebrow">' + COPY.story_eyebrow + '</div>' +
-'      <h2>' + h2 + '</h2>' +
-'      <p>' + COPY.story_p1 + '</p>' +
-'      <p>' + COPY.story_p2 + '</p>' +
-'      <div class="pull">' + COPY.story_pull + '</div>' +
-'      <a href="#/story" class="btn" style="margin-top:12px">Read the full story \u2192</a>' +
+'      <img src="assets/img/dom-logan-portrait.jpeg" alt="Dom Logan \u2014 founder of Karoo Prick Co." style="width:100%;display:block;border:1px solid var(--kp-ink);filter:sepia(0.15)">' +
 '    </div>' +
 '  </div>' +
 '</section>';
@@ -175,6 +173,48 @@ function renderHomeServe() {
 '</section>';
 }
 
+function renderHomeBotanicals() {
+  var BOTANICALS = window.KP_DATA.BOTANICALS;
+  var botanicalCards = BOTANICALS.map(function(b) {
+    return '' +
+'    <div class="botanical">' +
+'      <div class="num">' + b.num + '</div>' +
+'      <div class="glyph">' + b.glyph + '</div>' +
+'      <div class="name">' + b.name + '</div>' +
+'      <div class="latin">' + b.latin + '</div>' +
+'      <div class="desc">' + b.desc + '</div>' +
+'    </div>';
+  }).join('');
+
+  return '' +
+'<section class="section section-paper-aged" style="padding-top:120px;padding-bottom:120px">' +
+'  <div class="section-head">' +
+'    <div class="fadeup"><div class="eyebrow">— What’s inside —</div></div>' +
+'    <div class="fadeup" style="margin-top:14px"><div class="ribbon-title">The Botanicals</div></div>' +
+'    <div class="fadeup"><div class="subtitle">Four botanicals. One wild cactus fruit. Distilled in the Karoo.</div></div>' +
+'  </div>' +
+'  <div class="fadeup" style="margin:48px 0;width:100%;border:1px solid var(--kp-ink)">' +
+'    <img src="assets/img/botanicals-plate.jpeg" alt="Karoo Prick botanicals" style="width:100%;display:block">' +
+'  </div>' +
+'  <div class="botanicals">' +
+     botanicalCards +
+'  </div>' +
+'</section>';
+}
+
+function renderHomeClosing() {
+  var COPY = window.KP_DATA.COPY;
+  return '' +
+'<section class="section" style="padding-top:100px;padding-bottom:120px">' +
+'  <div style="max-width:780px;margin:0 auto;text-align:center">' +
+'    <div class="eyebrow">— A closing thought —</div>' +
+'    <h2 style="font-family:var(--font-serif);font-style:italic;font-size:clamp(28px,3vw,40px);font-weight:400;color:var(--kp-ink);line-height:1.4;margin:24px 0 32px">' + COPY.closing_h2 + '</h2>' +
+'    <div class="divider-ornate">❖ ❦ ❖</div>' +
+'    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--kp-rust-2)">Sit Bonum Tempora Volvunt</div>' +
+'  </div>' +
+'</section>';
+}
+
 function renderHomeConnect() {
   var COPY = window.KP_DATA.COPY;
   return '' +
@@ -196,7 +236,9 @@ window.renderHome = function renderHome() {
     renderHomeCraft() +
     renderHomeProducts() +
     renderHomeTasting() +
+    renderHomeBotanicals() +
     renderHomeServe() +
+    renderHomeClosing() +
     renderHomeConnect()
   );
 };

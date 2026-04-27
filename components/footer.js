@@ -32,7 +32,7 @@ window.renderFooter = function renderFooter() {
 
     '    <div class="footer-col">',
     '      <h4>The House</h4>',
-    '      <a href="#/story">Our Story</a>',
+    '      <a href="#/home">Our Story</a>',
     '      <a href="#/shop">Shop</a>',
     '      <a href="#/stockists">Stockists</a>',
     '      <a href="#/contact">Contact</a>',

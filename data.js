@@ -11,11 +11,10 @@ const PRODUCTS = [
 ];
 
 const BOTANICALS = [
-  { num: "01", name: "Prickly Pear",  latin: "Opuntia ficus-indica",  glyph: "\u2748", desc: "Hand-picked from the Swartberg. Sweet, faintly floral, quietly strange." },
+  { num: "01", name: "Cardamom",      latin: "Elettaria cardamomum",   glyph: "\u2748", desc: "Warm, aromatic, faintly sweet. Rounds the juniper and lifts the prickly pear." },
   { num: "02", name: "Juniper",       latin: "Juniperus communis",     glyph: "\u2726", desc: "The backbone. Resinous, piney, uncompromising." },
-  { num: "03", name: "Buchu",         latin: "Agathosma betulina",     glyph: "\u274b", desc: "A Cape fynbos leaf. Blackcurrant-minty, unmistakably South African." },
-  { num: "04", name: "Coriander",     latin: "Coriandrum sativum",     glyph: "\u2766", desc: "Seeds, never leaf. Warm citrus, dry spice, a second wind." },
-  { num: "05", name: "Angelica Root", latin: "Angelica archangelica",  glyph: "\u2756", desc: "Earthy, musky, the anchor. Lets the other four speak." },
+  { num: "03", name: "Coriander",     latin: "Coriandrum sativum",     glyph: "\u2766", desc: "Seeds, never leaf. Warm citrus, dry spice, a second wind." },
+  { num: "04", name: "Angelica Root", latin: "Angelica archangelica",  glyph: "\u2756", desc: "Earthy, musky, the anchor. Lets the other three speak." },
 ];
 
 const RECIPES = [

@@ -3,7 +3,7 @@
 var _navScrollHandler = null;
 
 window.renderNav = function renderNav(route) {
-  var darkRoutes = ['home', 'story'];
+  var darkRoutes = ['home'];
   var onDark = darkRoutes.indexOf(route) !== -1 ? ' on-dark' : '';
 
   function link(href, label, name) {
@@ -17,7 +17,7 @@ window.renderNav = function renderNav(route) {
     '    <img src="assets/img/karoo-prick-logo.png" alt="Karoo Prick" class="nav-logo">',
     '  </a>',
     '  <div class="nav-right">',
-    '    ' + link('#/story', 'Our Story', 'story'),
+    '    ' + link('#/home', 'Our Story', 'home'),
     '    ' + link('#/shop', 'Shop', 'shop'),
     '    ' + link('#/stockists', 'Stockists', 'stockists'),
     '    ' + link('#/contact', 'Contact', 'contact'),
