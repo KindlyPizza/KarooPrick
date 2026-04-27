@@ -144,26 +144,20 @@ function renderHomeTasting() {
 }
 
 function renderHomeServe() {
-  var RECIPES = window.KP_DATA.RECIPES;
-  var recipeCards = RECIPES.map(function(r) {
-    var ingredients = r.ingredients.map(function(i) {
-      return '<li><span>' + i.item + '</span><span class="qty">' + i.qty + '</span></li>';
-    }).join('');
+  var COPY = window.KP_DATA.COPY;
+  var serves = [
+    { title: COPY.serve_title_1, body: COPY.serve_body_1 },
+    { title: COPY.serve_title_2, body: COPY.serve_body_2 },
+  ];
+  var cards = serves.map(function(s) {
     return '' +
 '    <div class="fadeup">' +
 '      <div class="recipe">' +
 '        <div class="recipe-top">' +
-'          <div class="num">\u2116 ' + r.num + '</div>' +
-'          <h3>' + r.name + '</h3>' +
-'          <div class="sub">\u2014 ' + r.sub + ' \u2014</div>' +
+'          <h3>' + s.title + '</h3>' +
 '        </div>' +
 '        <div class="recipe-body">' +
-'          <h5>\u2014 Build \u2014</h5>' +
-'          <ul>' + ingredients + '</ul>' +
-'          <h5>\u2014 Glass \u00b7 Ice \u2014</h5>' +
-'          <p style="margin-bottom:14px">' + r.glass + ' ' + r.ice + '</p>' +
-'          <h5>\u2014 Method \u2014</h5>' +
-'          <p>' + r.note + '</p>' +
+'          <p>' + s.body + '</p>' +
 '        </div>' +
 '      </div>' +
 '    </div>';
@@ -172,11 +166,11 @@ function renderHomeServe() {
   return '' +
 '<section class="section section-dark" style="padding-top:100px;padding-bottom:100px">' +
 '  <div class="section-head">' +
-'    <div class="eyebrow light">\u2014 How to drink it \u2014</div>' +
-'    <div class="ribbon-title" style="margin-top:14px">The Recipes</div>' +
+'    <div class="eyebrow light">\u2014 How to enjoy it \u2014</div>' +
+'    <div class="ribbon-title" style="margin-top:14px">Serving Suggestions</div>' +
 '  </div>' +
 '  <div class="recipes">' +
-     recipeCards +
+     cards +
 '  </div>' +
 '</section>';
 }

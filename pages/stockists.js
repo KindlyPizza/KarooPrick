@@ -7,21 +7,27 @@ function renderStockistResults(filtered) {
     return '<div style="padding:80px 40px;text-align:center;border:1px solid var(--kp-ink);background:var(--kp-paper);font-family:var(--font-serif);font-style:italic;font-size:20px;color:var(--kp-rust-2)">No stockists match. Try a different town.</div>';
   }
 
-  // Group by town
+  // Group by province, preserving first-seen order
+  var provinceOrder = [];
   var grouped = {};
   filtered.forEach(function(s) {
-    if (!grouped[s.town]) grouped[s.town] = [];
-    grouped[s.town].push(s);
+    var key = s.province || s.town;
+    if (!grouped[key]) { grouped[key] = []; provinceOrder.push(key); }
+    grouped[key].push(s);
   });
 
   var serial = 1;
-  return Object.keys(grouped).map(function(town) {
-    var list = grouped[town];
+  return provinceOrder.map(function(province) {
+    var list = grouped[province];
     var items = list.map(function(s) {
       var num = String(serial++).padStart(2, '0');
+      var townLabel = s.province !== s.town
+        ? '<div class="town">' + s.town + '</div>'
+        : '';
       return '<div class="stockist">' +
-        '<div class="town">\u2116 ' + num + '</div>' +
+        '<div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.25em;color:var(--kp-rust-2);text-transform:uppercase;margin-bottom:4px">\u2116 ' + num + '</div>' +
         '<div class="name">' + s.name + '</div>' +
+        townLabel +
         '<div class="addr">' + s.addr + '</div>' +
         '<div class="tags">' + s.tags.map(function(t) { return '<span>' + t + '</span>'; }).join('') + '</div>' +
       '</div>';
@@ -29,7 +35,7 @@ function renderStockistResults(filtered) {
 
     return '<div style="margin-bottom:40px">' +
       '<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:14px">' +
-        '<div style="font-family:var(--font-display);font-size:28px;text-transform:uppercase;letter-spacing:0.02em;color:var(--kp-ink)">' + town + '</div>' +
+        '<div style="font-family:var(--font-display);font-size:28px;text-transform:uppercase;letter-spacing:0.02em;color:var(--kp-ink)">' + province + '</div>' +
         '<div style="flex:1;height:1px;background:var(--kp-ink)"></div>' +
         '<div style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.25em;color:var(--kp-rust-2);text-transform:uppercase">' + list.length + '</div>' +
       '</div>' +

@@ -27,13 +27,13 @@ window.renderFooter = function renderFooter() {
     '      <a href="#/shop">Prickly Pear Gin \u00b7 Special Edition</a>',
     '      <a href="#/shop">Prickly Pear Gin \u00b7 750ml</a>',
     '      <a href="#/shop">Prickly Pear Gin \u00b7 500ml</a>',
-    '      <a href="#/shop">Candy Liqueur</a>',
+    '      <a href="#/shop">Candy Crush Liqueur</a>',
     '    </div>',
 
     '    <div class="footer-col">',
     '      <h4>The House</h4>',
     '      <a href="#/story">Our Story</a>',
-    '      <a href="#/shop">Products</a>',
+    '      <a href="#/shop">Shop</a>',
     '      <a href="#/stockists">Stockists</a>',
     '      <a href="#/contact">Contact</a>',
     '    </div>',
@@ -42,7 +42,6 @@ window.renderFooter = function renderFooter() {
     '      <h4>Contact</h4>',
     '      <div class="footer-phone">' + contact.phone + '</div>',
     '      <div class="footer-email">' + contact.email + '</div>',
-    '      <div class="footer-email">' + contact.trade + '</div>',
     '    </div>',
 
     '  </div>',

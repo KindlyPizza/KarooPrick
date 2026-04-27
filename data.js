@@ -7,7 +7,7 @@ const PRODUCTS = [
   { id: "gin-700-special", title: "Prickly Pear Gin Special Edition", volume: "700 ml", abv: "43% vol", price: "R 690", badge: "Special", img: "assets/img/karoo-prick-special-edition.jpeg", desc: "A commemorative release in honour of Dom Logan \u2014 the imagineer, maker, and spirit behind every bottle of Karoo Prick. The same gin he built, bottled in his memory. Bold, layered, and deeply Karoo." },
   { id: "gin-750",         title: "Prickly Pear Gin",                        volume: "750 ml", abv: "43% vol", price: "R 690", badge: null,      img: "assets/img/karoo-prick-bottle-white-bg.jpeg", desc: "Built on a classic gin base of juniper, coriander, cappia bark, angelica root, and cardamom, this gin stays true to tradition. The addition of prickly pear attracts immediate attention with inspiration coming from the sweet kitsch feel of small-town Karoo shops." },
   { id: "gin-500",         title: "Prickly Pear Gin 500ml",            volume: "500 ml", abv: "43% vol", price: "R 480", badge: null,      img: "assets/img/karoo-prick-bottle-white-bg.jpeg", desc: "The same spirit, a smaller bottle. A perfect introduction to the Karoo, or a companion for a single weekend." },
-  { id: "liqueur",         title: "Candy Liqueur",                            volume: "500 ml", abv: "24% vol", price: "R 520", badge: "New",     img: "assets/img/karoo-prick-candy-liqueur.jpeg",   desc: "The sweeter side of the cactus. Made from ripe prickly pear fruit, this liqueur is rich, playful, and dangerously easy to enjoy. Sip it neat, mix it boldly, or save it for when rules feel optional." },
+  { id: "liqueur",         title: "Candy Crush Liqueur",                      volume: "500 ml", abv: "24% vol", price: "R 520", badge: "New",     img: "assets/img/karoo-prick-candy-liqueur.jpeg",   desc: "The sweeter side of the cactus. Made from ripe prickly pear fruit, this liqueur is rich, playful, and dangerously easy to enjoy. Sip it neat, mix it boldly, or save it for when rules feel optional." },
 ];
 
 const BOTANICALS = [
@@ -56,35 +56,35 @@ const RECIPES = [
 
 const STOCKISTS = [
   // Online
-  { town: "Online", name: "Gincident",             addr: "gincident.co.za",            tags: ["Online"] },
-  { town: "Online", name: "Liquor.co.za",           addr: "liquor.co.za",               tags: ["Online"] },
-  { town: "Online", name: "Makro",                  addr: "makro.co.za",                tags: ["Online"] },
-  { town: "Online", name: "Mother City Liquor",     addr: "mothercityliquor.co.za",     tags: ["Online"] },
-  { town: "Online", name: "Muddler",                addr: "muddler.co.za",              tags: ["Online"] },
-  { town: "Online", name: "Smous",                  addr: "smous.online",               tags: ["Online"] },
-  { town: "Online", name: "Olive & Grape",          addr: "oliveandgrape.co.za",        tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Gincident",             addr: "gincident.co.za",            tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Liquor.co.za",           addr: "liquor.co.za",               tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Makro",                  addr: "makro.co.za",                tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Mother City Liquor",     addr: "mothercityliquor.co.za",     tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Muddler",                addr: "muddler.co.za",              tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Smous",                  addr: "smous.online",               tags: ["Online"] },
+  { province: "Online",        town: "Online",          name: "Olive & Grape",          addr: "oliveandgrape.co.za",        tags: ["Online"] },
 
-  // Cape Town area
-  { town: "Cape Town",         name: "Alphen Tops",              addr: "Constantia",        tags: ["Retail"] },
-  { town: "Cape Town",         name: "City Cellar",              addr: "Joostenbergvlakte", tags: ["Retail"] },
-  { town: "Cape Town",         name: "Liquor City Claremont",    addr: "Claremont",         tags: ["Retail"] },
-  { town: "Cape Town",         name: "Woodstock Liquors",        addr: "Woodstock",         tags: ["Retail"] },
-  { town: "Cape Town",         name: "Wine Concepts on Kloof",   addr: "Kloof Street",      tags: ["Retail", "Gifting"] },
+  // Western Cape
+  { province: "Western Cape",  town: "Cape Town",       name: "Alphen Tops",              addr: "Constantia",        tags: ["Retail"] },
+  { province: "Western Cape",  town: "Cape Town",       name: "City Cellar",              addr: "Joostenbergvlakte", tags: ["Retail"] },
+  { province: "Western Cape",  town: "Cape Town",       name: "Liquor City Claremont",    addr: "Claremont",         tags: ["Retail"] },
+  { province: "Western Cape",  town: "Cape Town",       name: "Woodstock Liquors",        addr: "Woodstock",         tags: ["Retail"] },
+  { province: "Western Cape",  town: "Cape Town",       name: "Wine Concepts on Kloof",   addr: "Kloof Street",      tags: ["Retail", "Gifting"] },
+  { province: "Western Cape",  town: "Plettenberg Bay", name: "Bramon Wine Estate",       addr: "Plettenberg Bay",   tags: ["Retail", "Tastings"] },
+  { province: "Western Cape",  town: "Sedgefield",      name: "Sedgefield Brewery",       addr: "Sedgefield",        tags: ["Bar", "Retail"] },
+  { province: "Western Cape",  town: "St Francis Bay",  name: "Blue Bottle",              addr: "St Francis Bay",    tags: ["Retail"] },
+  { province: "Western Cape",  town: "Barrydale",       name: "Karoo Daisy Restaurant",   addr: "Barrydale",         tags: ["Bar", "Local"] },
+  { province: "Western Cape",  town: "Oudtshoorn",      name: "Pick n Pay Liquor",        addr: "Oudtshoorn",        tags: ["Retail"] },
+  { province: "Western Cape",  town: "De Rust",         name: "De Rust General Dealer",   addr: "De Rust",           tags: ["Retail", "Local"] },
 
-  // Garden Route
-  { town: "Plettenberg Bay",   name: "Bramon Wine Estate",       addr: "Plettenberg Bay",   tags: ["Retail", "Tastings"] },
-  { town: "Sedgefield",        name: "Sedgefield Brewery",       addr: "Sedgefield",        tags: ["Bar", "Retail"] },
-  { town: "St Francis Bay",    name: "Blue Bottle",              addr: "St Francis Bay",    tags: ["Retail"] },
+  // Gauteng
+  { province: "Gauteng",       town: "Pretoria",        name: "Cork & Brew",              addr: "Pretoria",          tags: ["Retail", "Bar"] },
 
-  // Karoo
-  { town: "Barrydale",         name: "Karoo Daisy Restaurant",   addr: "Barrydale",         tags: ["Bar", "Local"] },
-  { town: "Oudtshoorn",        name: "Pick n Pay Liquor",        addr: "Oudtshoorn",        tags: ["Retail"] },
-  { town: "De Rust",           name: "De Rust General Dealer",   addr: "De Rust",           tags: ["Retail", "Local"] },
+  // Mpumalanga
+  { province: "Mpumalanga",    town: "Dullstroom",      name: "Dullstroom Gin Bar",       addr: "Dullstroom",        tags: ["Bar", "Tastings"] },
 
-  // Other provinces
-  { town: "Pretoria",          name: "Cork & Brew",              addr: "Pretoria",          tags: ["Retail", "Bar"] },
-  { town: "Dullstroom",        name: "Dullstroom Gin Bar",       addr: "Dullstroom",        tags: ["Bar", "Tastings"] },
-  { town: "Hillcrest KZN",     name: "Hillcrest Tops",           addr: "Hillcrest",         tags: ["Retail"] },
+  // KwaZulu-Natal
+  { province: "KwaZulu-Natal", town: "Hillcrest",       name: "Hillcrest Tops",           addr: "Hillcrest",         tags: ["Retail"] },
 ];
 
 const CONTACT = {
@@ -145,12 +145,10 @@ const COPY = {
   // ---------------------------------------------------------------
   // HOME — How to Serve (3 named serves)
   // ---------------------------------------------------------------
-  serve_title_1:   'Classic G&T',
-  serve_body_1:    'A lovely fruit forward gin. Goes well with sparkling water, a pink tonic or a light tonic, and a slice of watermelon and/or blueberries. Finish with a pinch of crushed basil.',
-  serve_title_2:   'Candy Liqueur',
-  serve_body_2:    'The flavour of the liqueur is the star. Enjoy it on the rocks with a pinch of crushed basil or add a mixer of your choice.',
-  serve_title_3:   'The Sundowner',
-  serve_body_3:    'Karoo Prick Gin, fresh orange juice, a dash of bitters. Garnish with an orange peel.',
+  serve_title_1:   'The Prick & Tonic',
+  serve_body_1:    'A lovely fruit forward gin. It goes well with sparkling water, a pink tonic or a light tonic, and a slice of watermelon and/or blueberries. Add a pinch of crushed basil to pop the flavour.',
+  serve_title_2:   'Candy Crush Liqueur',
+  serve_body_2:    'The flavour of the liqueur is the star. Enjoy it on the rocks with a pinch of crushed basil, or add a mixer of your choice.',
 
   // ---------------------------------------------------------------
   // HOME — Let\u2019s Connect CTA

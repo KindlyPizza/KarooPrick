@@ -35,15 +35,11 @@ window.renderContact = function() {
           '<p>For wholesale, press, tastings, distillery tour, or anything else. We answer in the order they arrive.</p>' +
           '<div class="contact-block">' +
             '<h4>\u2014 By telephone \u2014</h4>' +
-            '<div class="v">' + CONTACT.phone + '</div>' +
+            '<div class="v">' + CONTACT.phone + ' <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.6">(WhatsApp only)</span></div>' +
           '</div>' +
           '<div class="contact-block">' +
             '<h4>\u2014 By email \u2014</h4>' +
-            '<div class="v">' + CONTACT.email + '<br>' + CONTACT.trade + '</div>' +
-          '</div>' +
-          '<div class="contact-block">' +
-            '<h4>\u2014 Tasting room \u2014</h4>' +
-            '<div class="v">' + CONTACT.tasting + '</div>' +
+            '<div class="v">' + CONTACT.email + '</div>' +
           '</div>' +
           socialBlock +
         '</div>' +
