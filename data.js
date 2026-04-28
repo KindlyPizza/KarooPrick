@@ -4,10 +4,11 @@
 // =============================================================
 
 const PRODUCTS = [
-  { id: "gin-700-special", title: "Prickly Pear Gin Special Edition", volume: "700 ml", abv: "43% vol", price: "R 690", badge: "Special", img: "assets/img/karoo-prick-special-edition.jpeg", desc: "A commemorative release in honour of Dom Logan \u2014 the imagineer, maker, and spirit behind every bottle of Karoo Prick. The same gin he built, bottled in his memory. Bold, layered, and deeply Karoo." },
-  { id: "gin-750",         title: "Prickly Pear Gin",                        volume: "750 ml", abv: "43% vol", price: "R 690", badge: null,      img: "assets/img/karoo-prick-bottle-white-bg.jpeg", desc: "Built on a classic gin base of juniper, coriander, cappia bark, angelica root, and cardamom, this gin stays true to tradition. The addition of prickly pear attracts immediate attention with inspiration coming from the sweet kitsch feel of small-town Karoo shops." },
-  { id: "gin-500",         title: "Prickly Pear Gin 500ml",            volume: "500 ml", abv: "43% vol", price: "R 480", badge: null,      img: "assets/img/karoo-prick-bottle-white-bg.jpeg", desc: "The same spirit, a smaller bottle. A perfect introduction to the Karoo, or a companion for a single weekend." },
-  { id: "liqueur",         title: "Candy Crush Liqueur",                      volume: "500 ml", abv: "24% vol", price: "R 520", badge: "New",     img: "assets/img/karoo-prick-candy-liqueur.jpeg",   desc: "The sweeter side of the cactus. Made from ripe prickly pear fruit, this liqueur is rich, playful, and dangerously easy to enjoy. Sip it neat, mix it boldly, or save it for when rules feel optional." },
+  { id: "gin-700-special", title: "Prickly Pear Gin Special Edition", volume: "700 ml", abv: "43% vol", price: "R 420", badge: "LIMITED EDITION", img: "assets/img/karoo-prick-special-edition.jpeg", desc: "A commemorative release in honour of Dom Logan \u2014 the imagineer, maker, and spirit behind every bottle of Karoo Prick. The same gin he built, bottled in his memory. Bold, layered, and deeply Karoo." },
+  { id: "gin-750",         title: "Prickly Pear Gin",                        volume: "750 ml", abv: "40% vol", price: "R 320", badge: null,      img: "assets/img/karoo-prick-rocks.jpg", desc: "Built on a classic gin base of juniper, coriander, cappia bark, angelica root, and cardamom, this gin stays true to tradition. The addition of prickly pear attracts immediate attention with inspiration coming from the sweet kitsch feel of small-town Karoo shops." },
+  { id: "gin-500",         title: "Prickly Pear Gin 500ml",            volume: "500 ml", abv: "40% vol", price: "R 280", badge: null,      img: "assets/img/karoo-prick-rocks.jpg", desc: "The same spirit, a smaller bottle. A perfect introduction to the Karoo, or a companion for a single weekend." },
+  { id: "gin-50ml",        title: "Prickly Pear Gin 50ml",             volume: "50 ml",  abv: "40% vol", price: "",      badge: null,      img: "assets/img/karoo-prick-bottle-white-bg.jpeg", desc: "The full Karoo Prick experience in miniature. Perfect for gifting or trying before you commit. Minimum order: 6 bottles." },
+  { id: "liqueur",         title: "Candy Crush Liqueur",                      volume: "500 ml", abv: "27,5% vol", price: "R 380", badge: "New",     img: "assets/img/karoo-prick-candy-liqueur.jpeg",   desc: "The sweeter side of the cactus. Made from ripe prickly pear fruit, this liqueur is rich, playful, and dangerously easy to enjoy. Sip it neat, mix it boldly, or save it for when rules feel optional." },
 ];
 
 const BOTANICALS = [
@@ -160,9 +161,9 @@ const COPY = {
   // SHOP page
   // ---------------------------------------------------------------
   shop_eyebrow:    '\u2014 The Collection \u2014',
-  shop_headline:   'Our Spirits',
-  shop_lede:       'We make four. A commemorative Special Edition, the 750ml flagship, a 500ml, and \u2014 new this season \u2014 a prickly pear Candy Liqueur.',
-  shop_product_cta: 'Enquire to Order',
+  shop_headline:   'Our Collection',
+  shop_lede:       'We make four. The 750ml flagship, a 500ml, a 50ml and \u2014 new this season \u2014 a 750ml Prickly Pear Candy Liqueur. A Limited Special Edition Label 700ml bottle commemorating our Founder is also available. Only one pallet made. Never to be repeated again.',
+  shop_product_cta: 'ORDER NOW',
   tasting_section_headline: 'A Symphony of Wild Sweetness',
   small_batch_body: 'Our still holds 400 litres. We run it twice a week. When we run out, we run out. The next batch is ready when it\u2019s ready.',
 

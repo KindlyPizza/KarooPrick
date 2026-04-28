@@ -7,14 +7,23 @@ function renderShopHero() {
 '<section class="shop-hero" style="background-image:linear-gradient(180deg,rgba(14,8,5,0.35),rgba(14,8,5,0.65)),url(assets/img/karoo-prick-candy-hero.jpeg);background-size:cover;background-position:center;color:var(--kp-paper)">' +
 '  <div class="eyebrow" style="color:rgba(244,235,214,0.7)">' + COPY.shop_eyebrow + '</div>' +
 '  <h1 style="color:var(--kp-paper)">' + COPY.shop_headline + '</h1>' +
-'  <div class="lede" style="color:rgba(244,235,214,0.85)">' + COPY.shop_lede + '</div>' +
+'</section>';
+}
+
+function renderShopIntro() {
+  var COPY = window.KP_DATA.COPY;
+  return '' +
+'<section class="section" style="padding-top:80px;padding-bottom:0;text-align:center">' +
+'  <p style="font-family:var(--font-serif);font-size:19px;line-height:1.7;max-width:760px;margin:0 auto;color:var(--kp-ink-soft)">' + COPY.shop_lede + '</p>' +
 '</section>';
 }
 
 function renderShopProducts() {
   var COPY = window.KP_DATA.COPY;
   var PRODUCTS = window.KP_DATA.PRODUCTS;
-  var productCards = PRODUCTS.map(function(p) {
+  var ORDER = ['gin-750','gin-500','gin-50ml','gin-700-special','liqueur'];
+  var sorted = ORDER.map(function(id) { return PRODUCTS.find(function(p) { return p.id === id; }); }).filter(Boolean);
+  var productCards = sorted.map(function(p) {
     return '' +
 '    <div class="fadeup">' +
 '      <div class="product">' +
@@ -25,8 +34,8 @@ function renderShopProducts() {
 '        <div class="title">' + p.title + '</div>' +
 '        <div class="desc">' + p.desc + '</div>' +
 '        <div class="meta">' +
-'          <div class="price">' + p.price + '</div>' +
-'          <div class="vol">' + p.volume + '</div>' +
+           (p.price ? '<div class="price">' + p.price + '</div>' : '') +
+'          <div class="vol">' + p.abv + ' · ' + p.volume + '</div>' +
 '        </div>' +
 '        <a href="#/contact" class="btn primary" style="width:100%;justify-content:center;margin-top:20px;display:flex">' + COPY.shop_product_cta + '</a>' +
 '      </div>' +
@@ -70,25 +79,12 @@ function renderShopTastingNotes() {
 '</section>';
 }
 
-function renderShopSmallBatch() {
-  var COPY = window.KP_DATA.COPY;
-  return '' +
-'<section class="section section-dark" style="padding-top:100px;padding-bottom:100px">' +
-'  <div style="max-width:900px;margin:0 auto;text-align:center">' +
-'    <div class="eyebrow light">\u2014 A note on availability \u2014</div>' +
-'    <h2 style="font-family:var(--font-display);font-size:clamp(40px,5vw,68px);text-transform:uppercase;color:var(--kp-paper);margin:20px 0 24px;letter-spacing:0.02em;line-height:1">Small batch. Literally.</h2>' +
-'    <p style="font-family:var(--font-serif);font-style:italic;font-size:20px;color:var(--kp-karoo-sand);max-width:560px;margin:0 auto 32px;line-height:1.6">' + COPY.small_batch_body + '</p>' +
-'    <a href="#/stockists" class="btn ghost-on-dark">Find a stockist \u2192</a>' +
-'  </div>' +
-'</section>';
-}
-
 window.renderShop = function renderShop() {
   return (
     renderShopHero() +
+    renderShopIntro() +
     renderShopProducts() +
-    renderShopTastingNotes() +
-    renderShopSmallBatch()
+    renderShopTastingNotes()
   );
 };
 
