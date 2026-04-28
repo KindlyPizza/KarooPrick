@@ -4,7 +4,7 @@
 function renderShopHero() {
   var COPY = window.KP_DATA.COPY;
   return '' +
-'<section class="shop-hero" style="background-image:linear-gradient(180deg,rgba(14,8,5,0.35),rgba(14,8,5,0.65)),url(assets/img/karoo-prick-candy-hero.jpeg);background-size:cover;background-position:center;color:var(--kp-paper)">' +
+'<section class="shop-hero" style="background-image:linear-gradient(180deg,rgba(14,8,5,0.35),rgba(14,8,5,0.65)),url(assets/img/karoo-prick-group.jpg);background-size:cover;background-position:center;color:var(--kp-paper)">' +
 '  <div class="eyebrow" style="color:rgba(244,235,214,0.7)">' + COPY.shop_eyebrow + '</div>' +
 '  <h1 style="color:var(--kp-paper)">' + COPY.shop_headline + '</h1>' +
 '</section>';
@@ -61,7 +61,7 @@ function renderShopTastingNotes() {
   var noteCards = notes.map(function(n) {
     return '' +
 '    <div class="note-card">' +
-'      <div class="eyebrow">\u2014 ' + n.h + ' \u2014</div>' +
+'      <div class="eyebrow">' + n.h + '</div>' +
 '      <h3 style="font-family:var(--font-display);font-size:42px;text-transform:uppercase;margin:12px 0 20px;letter-spacing:0.02em">' + n.h + '</h3>' +
 '      <p style="font-family:var(--font-serif);font-style:italic;font-size:16px;line-height:1.6;color:var(--kp-ink-soft);margin:0">' + n.body + '</p>' +
 '    </div>';
@@ -70,7 +70,7 @@ function renderShopTastingNotes() {
   return '' +
 '<section class="section section-paper-aged" style="padding-top:100px;padding-bottom:100px">' +
 '  <div class="section-head">' +
-'    <div class="eyebrow">\u2014 From the label \u2014</div>' +
+'    <div class="eyebrow">From the label</div>' +
 '    <div class="ribbon-title" style="margin-top:14px">' + COPY.tasting_section_headline + '</div>' +
 '  </div>' +
 '  <div class="tasting-notes">' +

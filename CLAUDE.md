@@ -13,6 +13,10 @@ python -m http.server 3002
 
 A `.claude/launch.json` is configured so `preview_start` with name `karoo-prick` also starts this server.
 
+## Development gotcha — browser cache
+
+Python's `http.server` sends no cache-control headers. The browser caches JS aggressively. All `<script>` tags in `index.html` carry a `?v=bN` suffix. **Bump this version (b4 → b5, etc.) after every batch of JS/CSS edits**, then reload, or the browser will silently serve stale code.
+
 ## Architecture
 
 Zero-dependency static SPA. No framework, no bundler, no package.json.
@@ -20,10 +24,11 @@ Zero-dependency static SPA. No framework, no bundler, no package.json.
 **Boot sequence** (defined by script order in `index.html`):
 1. `data.js` — exports `window.KP_DATA` (all content)
 2. `components/splash.js`, `nav.js`, `footer.js` — shared UI
-3. `pages/home.js`, `shop.js`, `story.js`, `stockists.js`, `contact.js` — page modules
+3. `pages/home.js`, `shop.js`, `stockists.js`, `contact.js` — page modules
+   (`story.js` still loads but is dead code — see Routing notes below)
 4. `app.js` — hash router, boots last
 
-**Routing:** Hash-based (`#/home`, `#/shop`, `#/story`, `#/stockists`, `#/contact`). `app.js` calls `window.renderXxx()` to get an HTML string, injects it into `#main-root`, then calls `window.initXxx()` for event listeners and `IntersectionObserver` fade-ups. Nav and footer re-render on every route change.
+**Routing:** Hash-based (`#/home`, `#/shop`, `#/stockists`, `#/contact`). `#/story` redirects to `#/home` — the Our Story content lives on the home page. `app.js` calls `window.renderXxx()` to get an HTML string, injects it into `#main-root`, then calls `window.initXxx()` for event listeners and `IntersectionObserver` fade-ups. Nav and footer re-render on every route change.
 
 **Content:** All copy, product data, stockists, contact details, and tasting notes live in `data.js` as plain JS constants on `window.KP_DATA`. Page files never hardcode copy — they read from `window.KP_DATA.COPY`. To update any text on the site, edit `data.js` only.
 

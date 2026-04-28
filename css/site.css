@@ -378,7 +378,7 @@ img { display: block; max-width: 100%; }
 
 /* Botanicals strip */
 .botanicals {
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 0;
   max-width: 1280px; margin: 0 auto;
   border-top: 1px solid var(--kp-ink);
@@ -617,8 +617,8 @@ img { display: block; max-width: 100%; }
 
 /* Recipe cards */
 .recipes {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 32px; max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 32px; max-width: 960px; margin: 0 auto;
 }
 .recipe {
   background: var(--kp-paper);
@@ -641,7 +641,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.3em; color: var(--kp-rust-2);
 }
 .recipe-top h3 {
-  font-family: var(--font-display); font-size: 28px;
+  font-family: var(--font-display); font-size: 30px;
   text-transform: uppercase; letter-spacing: 0.02em;
   color: var(--kp-ink); margin: 8px 0 6px; line-height: 1;
   text-shadow: 1.5px 1.5px 0 var(--accent-live);
@@ -659,7 +659,7 @@ img { display: block; max-width: 100%; }
 .recipe-body ul { list-style: none; margin: 0 0 24px; padding: 0; }
 .recipe-body li {
   padding: 8px 0; border-bottom: 1px dotted var(--kp-rust-2);
-  font-family: var(--font-serif); font-size: 14px;
+  font-family: var(--font-serif); font-size: 15px;
   color: var(--kp-ink);
   display: flex; justify-content: space-between;
 }
@@ -670,7 +670,7 @@ img { display: block; max-width: 100%; }
 }
 .recipe-body p {
   font-family: var(--font-serif); font-style: italic;
-  font-size: 13px; color: var(--kp-ink-soft);
+  font-size: 15px; color: var(--kp-ink-soft);
   line-height: 1.5; margin: 0;
 }
 
@@ -877,8 +877,6 @@ img { display: block; max-width: 100%; }
   /* Tasting notes → 2 columns */
   .tasting-notes { grid-template-columns: repeat(2, 1fr); }
 
-  /* Recipes → 2 columns */
-  .recipes { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============================================================

@@ -12,7 +12,7 @@ window.renderContact = function() {
     if (CONTACT.facebook) links.push('<a href="' + CONTACT.facebook + '" target="_blank" rel="noopener" style="font-family:var(--font-serif);color:var(--kp-ink);text-decoration:underline">Facebook</a>');
     if (CONTACT.instagram) links.push('<a href="' + CONTACT.instagram + '" target="_blank" rel="noopener" style="font-family:var(--font-serif);color:var(--kp-ink);text-decoration:underline">Instagram</a>');
     socialBlock = '<div class="contact-block">' +
-      '<h4>\u2014 Social \u2014</h4>' +
+      '<h4>Social</h4>' +
       '<div class="v">' + links.join('<br>') + '</div>' +
     '</div>';
   }
@@ -30,21 +30,21 @@ window.renderContact = function() {
     '<section class="section section-paper-aged" style="padding-top:100px;padding-bottom:120px">' +
       '<div class="contact-wrap">' +
         '<div class="contact-info">' +
-          '<div class="eyebrow">\u2014 Get in touch \u2014</div>' +
+          '<div class="eyebrow">Get in touch</div>' +
           '<h2>Write to us.</h2>' +
           '<p>For wholesale, press, tastings, distillery tour, or anything else. We answer in the order they arrive.</p>' +
           '<div class="contact-block">' +
-            '<h4>\u2014 By telephone \u2014</h4>' +
+            '<h4>By telephone</h4>' +
             '<div class="v">' + CONTACT.phone + ' <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.6">(WhatsApp only)</span></div>' +
           '</div>' +
           '<div class="contact-block">' +
-            '<h4>\u2014 By email \u2014</h4>' +
+            '<h4>By email</h4>' +
             '<div class="v">' + CONTACT.email + '</div>' +
           '</div>' +
           socialBlock +
         '</div>' +
         '<div class="contact-form" id="contact-form-section">' +
-          '<div class="eyebrow">\u2014 The letter \u2014</div>' +
+          '<div class="eyebrow">The letter</div>' +
           '<h3 style="font-family:var(--font-display);font-size:40px;text-transform:uppercase;color:var(--kp-ink);margin:12px 0 24px;letter-spacing:0.02em">Send a message</h3>' +
           '<form id="contact-form">' +
             '<div class="field">' +
@@ -81,7 +81,7 @@ window.initContact = function() {
         '<div style="text-align:center;padding:40px 20px">' +
           '<div style="font-size:56px;color:var(--kp-banner-red);margin-bottom:16px">\u2766</div>' +
           '<h3 style="font-family:var(--font-display);font-size:32px;text-transform:uppercase;color:var(--kp-ink);margin:0 0 16px;letter-spacing:0.02em">Letter received.</h3>' +
-          '<p style="font-family:var(--font-serif);font-style:italic;font-size:17px;color:var(--kp-ink-soft);line-height:1.6;max-width:360px;margin:0 auto 24px">Thank you. We\'ll reply within the week, usually within two days. In the meantime \u2014 pour yourself something.</p>' +
+          '<p style="font-family:var(--font-serif);font-style:italic;font-size:17px;color:var(--kp-ink-soft);line-height:1.6;max-width:360px;margin:0 auto 24px">Thank you. We\'ll reply within the week, usually within two days. In the meantime, pour yourself something.</p>' +
           '<button class="btn" id="write-another-btn">Write another</button>' +
         '</div>';
       var writeAnotherBtn = document.getElementById('write-another-btn');

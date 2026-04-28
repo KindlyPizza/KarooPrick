@@ -71,7 +71,7 @@ window.renderStockists = function() {
     // Section 2: Stockist finder
     '<section class="section">' +
       '<div class="section-head">' +
-        '<div class="eyebrow">\u2014 ' + STOCKISTS.length + ' stockists across South Africa \u2014</div>' +
+        '<div class="eyebrow">' + STOCKISTS.length + ' stockists across South Africa</div>' +
         '<div class="ribbon-title" style="margin-top:14px">Where to Buy</div>' +
       '</div>' +
       '<div class="stockist-wrap">' +
@@ -101,7 +101,7 @@ window.renderStockists = function() {
     // Section 3: Bottom CTA
     '<section class="section section-dark" style="padding-top:100px;padding-bottom:100px;text-align:center">' +
       '<div style="max-width:600px;margin:0 auto;padding:0 40px">' +
-        '<div class="eyebrow light">\u2014 Can\u2019t find your area? \u2014</div>' +
+        '<div class="eyebrow light">Can\u2019t find your area?</div>' +
         '<h2 style="font-family:var(--font-display);font-size:clamp(32px,4vw,52px);text-transform:uppercase;color:var(--kp-paper);letter-spacing:0.04em;margin:16px 0 20px">' + COPY.stockists_empty_cta_headline + '</h2>' +
         '<p style="font-family:var(--font-serif);font-size:18px;color:rgba(244,235,214,0.75);line-height:1.7;margin-bottom:32px">' + COPY.stockists_empty_cta_body + '</p>' +
         '<a href="#/contact" class="btn ghost-on-dark">' + COPY.stockists_empty_cta_btn + '</a>' +

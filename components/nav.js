@@ -39,4 +39,10 @@ window.initNav = function initNav() {
 
   // Set initial state
   _navScrollHandler();
+
+  // Clicking logo or "Our Story" while already on home doesn't fire hashchange,
+  // so force scroll-to-top on every click of those elements.
+  document.querySelectorAll('.nav-logo-link, .nav-link[href="#/home"]').forEach(function(el) {
+    el.addEventListener('click', function() { window.scrollTo(0, 0); });
+  });
 };

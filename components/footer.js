@@ -27,6 +27,7 @@ window.renderFooter = function renderFooter() {
     '      <a href="#/shop">Prickly Pear Gin \u00b7 Special Edition</a>',
     '      <a href="#/shop">Prickly Pear Gin \u00b7 750ml</a>',
     '      <a href="#/shop">Prickly Pear Gin \u00b7 500ml</a>',
+    '      <a href="#/shop">Prickly Pear Gin \u00b7 50ml</a>',
     '      <a href="#/shop">Candy Crush Liqueur</a>',
     '    </div>',
 

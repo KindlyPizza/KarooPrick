@@ -102,7 +102,7 @@ function renderHomeProducts() {
 '        <div class="title">' + p.title + '</div>' +
 '        <div class="desc">' + p.desc + '</div>' +
 '        <div class="meta">' +
-'          <div class="price">' + p.price + '</div>' +
+           (p.price ? '<div class="price">' + p.price + '</div>' : '') +
 '          <a href="#/contact" class="stockist-link">' + COPY.shop_product_cta + '</a>' +
 '        </div>' +
 '      </div>' +
@@ -127,6 +127,19 @@ function renderHomeProducts() {
 function renderHomeTasting() {
   var COPY = window.KP_DATA.COPY;
   var TASTING = window.KP_DATA.TASTING_NOTES;
+  var notes = [
+    { h: 'Nose',   body: TASTING.nose },
+    { h: 'Palate', body: TASTING.palate },
+    { h: 'Finish', body: TASTING.finish },
+  ];
+  var noteCards = notes.map(function(n) {
+    return '' +
+'    <div class="fadeup"><div class="note-card">' +
+'      <div class="eyebrow">' + n.h + '</div>' +
+'      <h3 style="font-family:var(--font-display);font-size:42px;text-transform:uppercase;margin:12px 0 20px;letter-spacing:0.02em">' + n.h + '</h3>' +
+'      <p style="font-family:var(--font-serif);font-style:italic;font-size:16px;line-height:1.6;color:var(--kp-ink-soft);margin:0">' + n.body + '</p>' +
+'    </div></div>';
+  }).join('');
   return '' +
 '<section class="section section-paper-aged" style="padding-top:120px;padding-bottom:120px">' +
 '  <div class="section-head">' +
@@ -134,28 +147,30 @@ function renderHomeTasting() {
 '    <div class="fadeup" style="margin-top:14px"><div class="ribbon-title">' + COPY.tasting_headline + '</div></div>' +
 '  </div>' +
 '  <div class="tasting-notes">' +
-'    <div class="fadeup"><div class="tn-card"><div class="tn-label">Nose</div><div class="tn-body">' + TASTING.nose + '</div></div></div>' +
-'    <div class="fadeup"><div class="tn-card"><div class="tn-label">Palate</div><div class="tn-body">' + TASTING.palate + '</div></div></div>' +
-'    <div class="fadeup"><div class="tn-card"><div class="tn-label">Finish</div><div class="tn-body">' + TASTING.finish + '</div></div></div>' +
+     noteCards +
 '  </div>' +
 '</section>';
 }
 
 function renderHomeServe() {
-  var COPY = window.KP_DATA.COPY;
-  var serves = [
-    { title: COPY.serve_title_1, body: COPY.serve_body_1 },
-    { title: COPY.serve_title_2, body: COPY.serve_body_2 },
-  ];
-  var cards = serves.map(function(s) {
+  var RECIPES = window.KP_DATA.RECIPES;
+  var serves = [RECIPES[0], RECIPES[3]];
+  var cards = serves.map(function(r) {
+    var ingredients = r.ingredients.map(function(i) {
+      return '<li><span>' + i.item + '</span><span class="qty">' + i.qty + '</span></li>';
+    }).join('');
     return '' +
 '    <div class="fadeup">' +
 '      <div class="recipe">' +
 '        <div class="recipe-top">' +
-'          <h3>' + s.title + '</h3>' +
+'          <div class="num">' + r.num + '</div>' +
+'          <h3>' + r.name + '</h3>' +
+'          <div class="sub">' + r.sub + '</div>' +
 '        </div>' +
 '        <div class="recipe-body">' +
-'          <p>' + s.body + '</p>' +
+'          <h5>' + r.glass + ' · ' + r.ice + '</h5>' +
+'          <ul>' + ingredients + '</ul>' +
+'          <p>' + r.note + '</p>' +
 '        </div>' +
 '      </div>' +
 '    </div>';
@@ -164,7 +179,7 @@ function renderHomeServe() {
   return '' +
 '<section class="section section-dark" style="padding-top:100px;padding-bottom:100px">' +
 '  <div class="section-head">' +
-'    <div class="eyebrow light">\u2014 How to enjoy it \u2014</div>' +
+'    <div class="eyebrow light">How to enjoy it</div>' +
 '    <div class="ribbon-title" style="margin-top:14px">Serving Suggestions</div>' +
 '  </div>' +
 '  <div class="recipes">' +
@@ -189,7 +204,7 @@ function renderHomeBotanicals() {
   return '' +
 '<section class="section section-paper-aged" style="padding-top:120px;padding-bottom:120px">' +
 '  <div class="section-head">' +
-'    <div class="fadeup"><div class="eyebrow">— What’s inside —</div></div>' +
+'    <div class="fadeup"><div class="eyebrow">What’s inside</div></div>' +
 '    <div class="fadeup" style="margin-top:14px"><div class="ribbon-title">The Botanicals</div></div>' +
 '    <div class="fadeup"><div class="subtitle">Four botanicals. One wild cactus fruit. Distilled in the Karoo.</div></div>' +
 '  </div>' +
@@ -207,7 +222,7 @@ function renderHomeClosing() {
   return '' +
 '<section class="section" style="padding-top:100px;padding-bottom:120px">' +
 '  <div style="max-width:780px;margin:0 auto;text-align:center">' +
-'    <div class="eyebrow">— A closing thought —</div>' +
+'    <div class="eyebrow">A closing thought</div>' +
 '    <h2 style="font-family:var(--font-serif);font-style:italic;font-size:clamp(28px,3vw,40px);font-weight:400;color:var(--kp-ink);line-height:1.4;margin:24px 0 32px">' + COPY.closing_h2 + '</h2>' +
 '    <div class="divider-ornate">❖ ❦ ❖</div>' +
 '    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--kp-rust-2)">Sit Bonum Tempora Volvunt</div>' +
@@ -220,7 +235,7 @@ function renderHomeConnect() {
   return '' +
 '<section class="section" style="background:var(--kp-paper-aged);padding-top:120px;padding-bottom:120px;text-align:center">' +
 '  <div class="fadeup" style="max-width:600px;margin:0 auto;padding:0 40px">' +
-'    <div class="eyebrow">\u2014 Get in Touch \u2014</div>' +
+'    <div class="eyebrow">Get in Touch</div>' +
 '    <h2 style="font-family:var(--font-display);font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:0.03em;color:var(--kp-ink);margin:16px 0 24px">' + COPY.connect_headline + '</h2>' +
 '    <p style="font-family:var(--font-serif);font-size:18px;color:var(--kp-ink-soft);line-height:1.7;margin-bottom:36px">' + COPY.connect_body + '</p>' +
 '    <a href="#/contact" class="btn primary">' + COPY.connect_cta + '</a>' +

@@ -4,7 +4,7 @@
 // =============================================================
 
 const PRODUCTS = [
-  { id: "gin-700-special", title: "Prickly Pear Gin Special Edition", volume: "700 ml", abv: "43% vol", price: "R 420", badge: "LIMITED EDITION", img: "assets/img/karoo-prick-special-edition.jpeg", desc: "A commemorative release in honour of Dom Logan \u2014 the imagineer, maker, and spirit behind every bottle of Karoo Prick. The same gin he built, bottled in his memory. Bold, layered, and deeply Karoo." },
+  { id: "gin-700-special", title: "Prickly Pear Gin Special Edition", volume: "700 ml", abv: "43% vol", price: "R 420", badge: "LIMITED EDITION", img: "assets/img/karoo-prick-special-edition.jpeg", desc: "A commemorative release in honour of Dom Logan, the imagineer, maker, and spirit behind every bottle of Karoo Prick. The same gin he built, bottled in his memory. Bold, layered, and deeply Karoo." },
   { id: "gin-750",         title: "Prickly Pear Gin",                        volume: "750 ml", abv: "40% vol", price: "R 320", badge: null,      img: "assets/img/karoo-prick-rocks.jpg", desc: "Built on a classic gin base of juniper, coriander, cappia bark, angelica root, and cardamom, this gin stays true to tradition. The addition of prickly pear attracts immediate attention with inspiration coming from the sweet kitsch feel of small-town Karoo shops." },
   { id: "gin-500",         title: "Prickly Pear Gin 500ml",            volume: "500 ml", abv: "40% vol", price: "R 280", badge: null,      img: "assets/img/karoo-prick-rocks.jpg", desc: "The same spirit, a smaller bottle. A perfect introduction to the Karoo, or a companion for a single weekend." },
   { id: "gin-50ml",        title: "Prickly Pear Gin 50ml",             volume: "50 ml",  abv: "40% vol", price: "",      badge: null,      img: "assets/img/karoo-prick-bottle-white-bg.jpeg", desc: "The full Karoo Prick experience in miniature. Perfect for gifting or trying before you commit. Minimum order: 6 bottles." },
@@ -51,6 +51,15 @@ const RECIPES = [
       { item: "Orange peel",     qty: "1" },
     ],
     note: "Stir over ice for twenty seconds. Do not shake a negroni.",
+  },
+  {
+    num: "04", name: "Candy Crush Liqueur", sub: "on the rocks",
+    glass: "Rocks, chilled.", ice: "Cubed.",
+    ingredients: [
+      { item: "Candy Crush Liqueur", qty: "50 ml" },
+      { item: "Crushed basil",       qty: "pinch" },
+    ],
+    note: "The flavour of the liqueur is the star. Sip neat, mix it boldly, or save it for when rules feel optional.",
   },
 ];
 
@@ -100,46 +109,46 @@ const COPY = {
   // ---------------------------------------------------------------
   // HOME — Hero
   // ---------------------------------------------------------------
-  hero_eyebrow:    '\u2014 Prickly Pear Spirits \u00b7 Karoo, South Africa \u2014',
+  hero_eyebrow:    'Prickly Pear Spirits \u00b7 Karoo, South Africa',
   hero_headline:   'Bottled\nResilience',
-  hero_lede:       '\u201cAt first encounter the Karoo may seem arid, desolate and unforgiving, but to those who know it, it is a land of secret beauty and infinite variety.\u201d \u2014 Eve Palmer, The Plains of Camdeboo',
+  hero_lede:       '\u201cAt first encounter the Karoo may seem arid, desolate and unforgiving, but to those who know it, it is a land of secret beauty and infinite variety.\u201d Eve Palmer, The Plains of Camdeboo',
   hero_cta_primary: 'Explore the Range \u2192',
 
   // ---------------------------------------------------------------
   // HOME — Story snippet
   // ---------------------------------------------------------------
-  story_eyebrow:   '\u2014 Our Story \u2014',
+  story_eyebrow:   'Our Story',
   story_h2:        'The Karoo\nteaches patience.',
   story_p1:        'The Karoo teaches patience. Things grow slowly here. Flavours deepen. And if you rush, you usually get pricked. The business was founded by Dom Logan, an imagineer and maker with a curiosity for wild things and a soft spot for plants that don\u2019t behave.',
-  story_p2:        'His focus turned to the prickly pear \u2014 tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care.',
-  story_pull:      '\u2018All good things are wild and free\u2019 \u2014 Henry David Thoreau',
+  story_p2:        'His focus turned to the prickly pear, tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care.',
+  story_pull:      '\u2018All good things are wild and free\u2019 Henry David Thoreau',
 
   // ---------------------------------------------------------------
   // HOME — The Prickly Pear section
   // ---------------------------------------------------------------
-  pear_eyebrow:    '\u2014 The Origins \u2014',
+  pear_eyebrow:    'The Origins',
   pear_h2:         'The Prickly\nPear',
-  pear_p1:         'The prickly pear cactus \u2014 Opuntia ficus-indica \u2014 was introduced to the Karoo and thrived where most plants barely survive, spreading across the landscape over generations.',
-  pear_p2:         'Its fruit \u2014 vibrant, sweet, guarded by thorns \u2014 is the heart of everything we make. Carefully harvested and distilled to capture a wild sweetness that carries the land it came from.',
+  pear_p1:         'The prickly pear cactus, Opuntia ficus-indica, was introduced to the Karoo and thrived where most plants barely survive, spreading across the landscape over generations.',
+  pear_p2:         'Its fruit, vibrant, sweet, guarded by thorns, is the heart of everything we make. Carefully harvested and distilled to capture a wild sweetness that carries the land it came from.',
 
   // ---------------------------------------------------------------
   // HOME — Small Batch, Big Character section
   // ---------------------------------------------------------------
-  craft_eyebrow:   '\u2014 The Craft \u2014',
+  craft_eyebrow:   'The Craft',
   craft_h2:        'Small Batch,\nBig Character',
-  craft_p1:        'Every bottle of Karoo Prick is crafted in small batches, requiring close attention at every step. The botanicals \u2014 juniper, coriander, Karoo buchu and more \u2014 are carefully selected to complement and elevate the delicate prickly pear character.',
+  craft_p1:        'Every bottle of Karoo Prick is crafted in small batches, requiring close attention at every step. The botanicals, juniper, coriander, angelica root, and cardamom, are carefully selected to complement and elevate the delicate prickly pear character.',
   craft_p2:        'A distinct spirit that is quintessentially Karoo: bold, layered, and deeply rooted in South Africa.',
 
   // ---------------------------------------------------------------
   // HOME — Products section
   // ---------------------------------------------------------------
-  products_eyebrow:  '\u2014 The Collection \u2014',
+  products_eyebrow:  'The Collection',
   products_headline: 'Craft Gin\n& Liqueur',
 
   // ---------------------------------------------------------------
   // HOME — Tasting Profile section
   // ---------------------------------------------------------------
-  tasting_eyebrow:   '\u2014 Tasting Profile \u2014',
+  tasting_eyebrow:   'Tasting Profile',
   tasting_headline:  'A Symphony of\nWild Sweetness',
 
   // ---------------------------------------------------------------
@@ -154,15 +163,15 @@ const COPY = {
   // HOME — Let\u2019s Connect CTA
   // ---------------------------------------------------------------
   connect_headline: 'Let\u2019s Connect',
-  connect_body:     'Whether you\u2019re looking for stockist information, wholesale enquiries, or simply want to learn more about our Karoo spirits \u2014 we\u2019d love to hear from you.',
+  connect_body:     'Whether you\u2019re looking for stockist information, wholesale enquiries, or simply want to learn more about our Karoo spirits, we\u2019d love to hear from you.',
   connect_cta:      'Get in Touch \u2192',
 
   // ---------------------------------------------------------------
   // SHOP page
   // ---------------------------------------------------------------
-  shop_eyebrow:    '\u2014 The Collection \u2014',
+  shop_eyebrow:    'The Collection',
   shop_headline:   'Our Collection',
-  shop_lede:       'We make four. The 750ml flagship, a 500ml, a 50ml and \u2014 new this season \u2014 a 750ml Prickly Pear Candy Liqueur. A Limited Special Edition Label 700ml bottle commemorating our Founder is also available. Only one pallet made. Never to be repeated again.',
+  shop_lede:       'We make four. The 750ml flagship, a 500ml, a 50ml and, new this season, a 750ml Prickly Pear Candy Liqueur. A Limited Special Edition Label 700ml bottle commemorating our Founder is also available. Only one pallet made. Never to be repeated again.',
   shop_product_cta: 'ORDER NOW',
   tasting_section_headline: 'A Symphony of Wild Sweetness',
   small_batch_body: 'Our still holds 400 litres. We run it twice a week. When we run out, we run out. The next batch is ready when it\u2019s ready.',
@@ -170,7 +179,7 @@ const COPY = {
   // ---------------------------------------------------------------
   // STOCKISTS page
   // ---------------------------------------------------------------
-  stockists_eyebrow:           '\u2014 Where to Find Us \u2014',
+  stockists_eyebrow:           'Where to Find Us',
   stockists_headline:          'Get Some\nHere',
   stockists_lede:              'Find Karoo Prick in stores nearby, order online or at a retailer near you, across South Africa.',
   stockists_empty_cta_headline: 'Didn\u2019t see your area?',
@@ -180,32 +189,32 @@ const COPY = {
   // ---------------------------------------------------------------
   // FOOTER
   // ---------------------------------------------------------------
-  footer_tagline:   'Quintessential Karoo \u2014 crafting prickly pear spirits that capture the wild beauty of the South African desert.',
+  footer_tagline:   'Quintessential Karoo, crafting prickly pear spirits that capture the wild beauty of the South African desert.',
 
   // ---------------------------------------------------------------
   // CONTACT page
   // ---------------------------------------------------------------
-  contact_eyebrow:  '\u2014 Get in Touch \u2014',
+  contact_eyebrow:  'Get in Touch',
   contact_headline: 'Let\u2019s Talk',
   contact_form_btn: 'Send Message \u2192',
 
   // ---------------------------------------------------------------
   // STORY page
   // ---------------------------------------------------------------
-  story_page_lede: 'Sweet, sharp, made with intention \u2014 just like the man and land that inspired it.',
+  story_page_lede: 'Sweet, sharp, made with intention, just like the man and land that inspired it.',
   origin_h2:       'A fruit\nnobody wanted.',
-  origin_eyebrow:  '\u2014 How it started \u2014',
+  origin_eyebrow:  'How it started',
   origin_p1:       'The Karoo teaches patience. Things grow slowly here. Flavours deepen. And if you rush, you usually get pricked. Dom Logan was an imagineer and maker with a curiosity for wild things and a soft spot for plants that don\u2019t behave.',
-  origin_p2:       'His focus turned to the prickly pear \u2014 tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care. Built on a classic gin base, the prickly pear attracts immediate attention \u2014 inspired by the sweet kitsch feel of small-town Karoo shops.',
-  origin_pull:     'Because good things aren\u2019t always polite \u2014 and Dom liked a clever play on words. There may have been a naughty donkey involved too.',
-  closing_h2:      'Sweet, sharp, made with intention \u2014 just like the man and land that inspired it.',
+  origin_p2:       'His focus turned to the prickly pear, tough, generous, sharp-edged, and unexpectedly sweet. A fruit perfectly suited to the Karoo, and to craft spirits made with care. Built on a classic gin base, the prickly pear attracts immediate attention, inspired by the sweet kitsch feel of small-town Karoo shops.',
+  origin_pull:     '\u2018All good things are wild and free\u2019 Henry David Thoreau',
+  closing_h2:      'Sweet, sharp, made with intention, just like the man and land that inspired it.',
 };
 
 const TASTING_NOTES = {
-  nose:    'Intensely fruity \u2014 watermelon candy and fresh cactus fruit.',
+  nose:    'Intensely fruity: watermelon candy and fresh cactus fruit.',
   palate:  'Not as sweet as expected. Juicy, fruity intensity that fills the palate. The prickly pear leads; the botanicals follow.',
   finish:  'Crisp and clean.',
-  expert:  'Quintessentially Karoo \u2014 a not-so-dry, fruit-forward juicy sweet gin reminiscent of bubblegum and hard-boiled watermelon candy.',
+  expert:  'Quintessentially Karoo, a not-so-dry, fruit-forward juicy sweet gin reminiscent of bubblegum and hard-boiled watermelon candy.',
 };
 
 // TIMELINE removed from site per design update (Dom Logan, 2026-04).
